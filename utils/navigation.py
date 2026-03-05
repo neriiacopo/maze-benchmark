@@ -1,13 +1,14 @@
 import config
-from actions import run_maze_step, run_prologue_step, game_over
+from utils.utils import preprocess_df
+from utils.actions import run_maze_step, run_prologue_step, game_over
 
 
 class Agent:
-    def __init__(self, model, past_notes=""):
+    def __init__(self, model, last_notes=""):
         self.model = model
         self.alive = True
         self.status = "exploring"
-        self.past_notes = past_notes
+        self.last_notes = last_notes
 
 class Room:
     def __init__(self, room_id, description, img_url, valid_doors):
@@ -17,8 +18,8 @@ class Room:
         self.valid_doors = valid_doors
 
 class Maze:
-    def __init__(self, df, imgs_dir=config.IMGS_DIR, subdirs=config.IMGS_SUBDIR):
-        self.df = df
+    def __init__(self, df_path=config.DF_PATH, imgs_dir=config.IMGS_DIR, subdirs=config.IMGS_SUBDIR):
+        self.df = preprocess_df(df_path)
         self.imgs_dir = imgs_dir
         self.subdirs = subdirs
         self.img_res = "low" 
@@ -121,6 +122,14 @@ def explore_maze(agent, maze, start_room=1, max_steps=config.MAX_STEPS):
                 })
 
     if agent.status != "exploring":
-        future_note = game_over(agent, travel_history).note
+        last_note = game_over(agent, travel_history).note
 
-    return travel_history, decision_history, analysis_history, future_note, agent
+    new_data = {
+        "travel_logs": travel_history,
+        "decision_logs": decision_history,
+        "analysis_logs": analysis_history,
+        "last_notes": last_note,
+        "end_causes": agent.status
+    }
+
+    return new_data, agent

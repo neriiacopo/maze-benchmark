@@ -1,11 +1,9 @@
-import base64
 import time
 import socket
 import config
-from schema import MazeResponse, PrologueAnalysis, LastWish
+from utils.schema import MazeResponse, PrologueAnalysis, LastWish
+from utils.utils import encode_image, stringify_history
 from langchain_core.prompts import ChatPromptTemplate
-
-from utils import encode_image, stringify_history
 
 class Call:
     def __init__(self, agent, room=None, maze=None, history=None, prologue=False, last_wish=None):
@@ -23,17 +21,17 @@ class Call:
         # Textual content
         if self.prologue: # Prologue step
             room = self.maze.get_room(0)
-            content.append({"type": "text", "text": f"Prologue Instructions: {room.description}\n\nNotes from previous Attempts: {self.agent.past_notes}"})
+            content.append({"type": "text", "text": f"Prologue Instructions: {room.description}\n\nNotes from previous Attempts: {self.agent.last_notes}"})
             
             for img_key in ["frontcover", "directions"]:
                 path = self.maze.get_img_url(img_key)
                 b64s.append(encode_image(path))
 
         elif self.last_wish: # Last Wish step
-            content.append({"type": "text", "text": f"Final Message: {self.last_wish}\n\nHistory: {self.history}\n\nNotes from previous Attempts: {self.agent.past_notes}"})
+            content.append({"type": "text", "text": f"Final Message: {self.last_wish}\n\nHistory: {self.history}\n\nNotes from previous Attempts: {self.agent.last_notes}"})
 
         else: # Maze step
-            text = f"Current Room: {self.room.room_id}\nPage Text: {self.room.description}\n\nHistory: {self.history}\n\nNotes from previous Attempts: {self.agent.past_notes}"
+            text = f"Current Room: {self.room.room_id}\nPage Text: {self.room.description}\n\nHistory: {self.history}\n\nNotes from previous Attempts: {self.agent.last_notes}"
             content.append({"type": "text", "text": text})
             b64s.append(encode_image(self.room.img_url))
 
