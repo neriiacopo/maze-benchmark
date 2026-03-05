@@ -1,0 +1,1 @@
+The image and text assets for this benchmark are sourced from [Al Sweigart's mazewebsite](https://github.com/asweigart/mazewebsite). This repository is for educational and research purposes only, specifically for benchmarking AI visual reasoning.
