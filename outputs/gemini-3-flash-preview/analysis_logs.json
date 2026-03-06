@@ -1,0 +1,189 @@
+[
+    {
+        "iteration": 0,
+        "data": [
+            {
+                "step": 1,
+                "current_room": 1,
+                "available_doors": [
+                    20,
+                    21,
+                    26,
+                    41
+                ],
+                "visual_clues": "Four doors are present, each with a label and a symbol: 20 (STORY, drum), 26 (FABLE, cup), 41 (TALE, bottle), and 21 (YARN, ball of yarn). Numerous scrolls with cryptic symbols are scattered on the floor and an easel. Bright light enters from a doorway on the left.",
+                "textual_clues": "The phrase 'The story of my life' directly references the label on Door 20. The mention of 'something was ringing' likely refers to the drum symbol on Door 20. While 'Nary a soul' is an anagram for 'Yarn' (Door 21), it is presented as a comment on an empty room, suggesting it might be a dead end or an incorrect choice."
+            },
+            {
+                "step": 2,
+                "current_room": 20,
+                "available_doors": [
+                    5,
+                    27,
+                    1
+                ],
+                "visual_clues": "The room features a tortoise in the center, a telephone on a side table, and a chair with a cushion shaped like a castle tower (a rook). On the floor, a newspaper titled 'EXTRA' shows two large symbols that resemble the number '5' (though they look like stylized 'S' letters). Through door 27, an arrow pointing upwards is visible. A portrait of a man in a turban (a Turk) is also present.",
+                "textual_clues": "The text mentions a ringing that stopped (the telephone) and the presence of a 'wise old tortoise'. The phrase 'muttered comments about turtles' might be a phonetic hint toward 'Turk' (the portrait) or a redirection. The text ends with 'entered...', indicating a transition to the next room."
+            },
+            {
+                "step": 3,
+                "current_room": 5,
+                "available_doors": [
+                    43,
+                    22,
+                    30,
+                    20
+                ],
+                "visual_clues": "The room is filled with tree-like pillars. There is an easel with a list: 'forthwith', 'forthright', 'forthward', and 'forth___'. On the floor near door 30, there is a small object that looks like a 'jack' from the game of jacks, which typically has 6 points. Door 22 contains a framed picture of a building or gate, while the other doors (43, 30, 20) appear as dark openings.",
+                "textual_clues": "The text mentions a 'one in four' or 'two in four' chance of choosing wisely, suggesting that multiple doors might be 'correct' or that the odds are being debated. It also mentions entering a 'very long, dark corridor', which makes the dark openings (like door 30) more likely than the door with a picture (22). The phrase 'counting the gate' refers to the total number of doors in the maze (190)."
+            },
+            {
+                "step": 4,
+                "current_room": 30,
+                "available_doors": [
+                    5,
+                    15,
+                    34,
+                    42
+                ],
+                "visual_clues": "There is a tree bearing exactly 15 pieces of fruit. A large letter 'O' and 'U' are prominent; 'O' is the 15th letter and 'U' is the 21st letter of the alphabet. A dial with letters A-H has its pointer at 'D', the 4th letter, which corresponds to this being the 4th step of the journey. A sign reads 'IF NO EVE' with an arrow pointing toward door 15, and a small key on the floor also points in that direction.",
+                "textual_clues": "The text mentions that the beautiful door (34) is meant to influence the decision, which is often a trap in this maze. The 'thoughtful one' suggests people might avoid it, but the narrator admits to enjoying their confusion. The sign 'IF NO EVE' can be read as a pun for 'IF NO EVEN', suggesting that we should avoid the even-numbered doors (34 and 42) and choose an odd one. Door 5 is the room we just came from, leaving 15 as the logical choice."
+            },
+            {
+                "step": 5,
+                "current_room": 15,
+                "available_doors": [
+                    3,
+                    30,
+                    37
+                ],
+                "visual_clues": "The room features three doors, with door 3 notably slightly ajar. There is a sacrificial tripod (historically having 3 legs) with a hat on it, a heart-shaped chair with a rabbit and another hat, and a scroll listing five Greek heroes: JASON, HERCULES, THESEUS, ACHILLES, and ULYSSES. Drawings on the wall show a house, three circular objects in the sky, and a sequence of a bird, clouds, moon, and bat. Door 30 has a sign that says 'SUN'.",
+                "textual_clues": "The text emphasizes the number three: 'At least three of us can sit down', 'only three possible choices', and 'tri-pod'. It also mentions 'these numbers relate to each other in some specific combination', which could be a mathematical hint (15 x 3 = 45, our destination). The narrator's mention of not knowing himself and leaning on a sacrificial tripod references the Delphic Oracle's 'Know Thyself'."
+            },
+            {
+                "step": 6,
+                "current_room": 3,
+                "available_doors": [
+                    33,
+                    9,
+                    18
+                ],
+                "visual_clues": "The entire room is a mirror image, evidenced by the reversed text and the note about feeling 'all turned around.' A 'STOP' sign (an octagon with 8 sides) is mirrored. Door 33 (labeled 'EE') has a moon symbol, door 9 (labeled 'NINE') is behind a sphinx with a question mark, and door 18 (labeled '81') has a sun symbol. A 'THIS WAY' sign points toward door 18 in the image (pointing left in the actual room). A banner on the floor asks 'WHAT IS YOUR SIGN?'. A non-mirrored number '3' is in the bottom right corner.",
+                "textual_clues": "The text mentions the group felt 'all turned around' and missed the 'real sign' while looking at the 'obvious.' This suggests the 'THIS WAY' sign is a red herring. The riddle 'How many sides does that problem have? They don\u2019t know' likely uses the word 'None' as a pun for 'Nine,' especially since the sphinx (a classic riddle-maker) is associated with that door."
+            },
+            {
+                "step": 7,
+                "current_room": 9,
+                "available_doors": [
+                    3,
+                    18
+                ],
+                "visual_clues": "The room is a dusty storeroom containing a shovel and an excavation pit. Several paintings are present: a penguin, three faces (resembling the explorers), a damaged painting of a knight with a sword, and a sphere with rays (possibly a sun or a bomb). Through the open doorway of 18, an apple and a painting of a winged horse (Pegasus) are visible.",
+                "textual_clues": "The text discusses the possibility of going in circles (Door 3) and mentions a 'trick.' The thoughtful explorer suggests the trick is that 'we're supposed to think it's a trick.' This implies that the seemingly obvious or suspicious path (Door 18) is actually the correct one."
+            },
+            {
+                "step": 8,
+                "current_room": 18,
+                "available_doors": [
+                    13,
+                    3
+                ],
+                "visual_clues": "The room features a large fireplace shaped like a face, which the text refers to as 'someone'. Above the curtained doorways are musical staffs. Above door 13, there is a musical symbol known as a 'half-rest', which looks like a small hat sitting on a line. Above door 3, there are two crotchet (quarter) notes. There is also a single bowling pin (skittle) next to door 13. A shadow cast on the floor by a chair appears to form the number '45', but since previous attempts to enter door 45 failed, this is likely the 'red herring' hinted at in the prologue.",
+                "textual_clues": "The text mentions 'someone's lost his hat' and 'fire's music'. The musical half-rest above door 13 is colloquially called a 'hat', and the fireplace face is the 'someone'. The narrator's question 'Are you sure it's the hat that is lost?' might be a subtle hint about the symbol or the door number itself. 'Ducking behind a curtain' confirms the exit is one of the curtained bays."
+            },
+            {
+                "step": 9,
+                "current_room": 13,
+                "available_doors": [
+                    27,
+                    18,
+                    25
+                ],
+                "visual_clues": "A clock held by skeletons shows 6:00. A sign lists nine units of time: Millennium, Century, Decade, Year, Month, Week, Day, Hour, and Minute. A spotlight is positioned to the right of a sundial, casting its shadow toward the left, which is where door 27 is located. There is also a director's chair with a megaphone.",
+                "textual_clues": "The room number is 13, and the text refers to Friday (often the 6th day) and being 'closer to the end of the week'. It mentions the clock 'thought it was six in the evening', which is 18:00 (matching the door I entered from). The phrase 'understand how time works' suggests a mathematical or sequential relationship between the time units and the doors."
+            }
+        ]
+    },
+    {
+        "iteration": 1,
+        "data": [
+            {
+                "step": 1,
+                "current_room": 1,
+                "available_doors": [
+                    20,
+                    26,
+                    41,
+                    21
+                ],
+                "visual_clues": "The room features four doors labeled STORY (20), FABLE (26), TALE (41), and YARN (21). Symbols on the doors include a drum (20), a bowl (26), a bell (41), and a pineapple (21). There is a banner and several scrolls featuring stylized symbols that appear to be a code for numbers and words. A banner on the left and an easel display symbols that look like the word 'MAP' in a stylized font.",
+                "textual_clues": "The text mentions 'The story of my life', which points directly to Door 20 (STORY). While it mentions something 'ringing' and 'being late' (Door 41, the bell), it specifically warns that 'the silences of the Maze are as eloquent as the sounds,' suggesting the ringing bell is a red herring. 'Nary a soul' is an anagrammatic hint for 'Yarn' (Door 21)."
+            },
+            {
+                "step": 2,
+                "current_room": 20,
+                "available_doors": [
+                    5,
+                    27,
+                    1
+                ],
+                "visual_clues": "There is a large tortoise on the floor facing the right side of the room. A newspaper on the floor says 'EXTRA' with two '5's or 'S's on it. To the right of a closed, covered door, there is a portrait of a man wearing a turban. Inside the doorway of Room 27, a downward or upward-pointing arrow is visible in the darkness. There is a poster of a tower or lighthouse near Door 1, and an old-fashioned telephone on a table.",
+                "textual_clues": "The text highlights 'muttered comments about turtles' as the characters leave Room 20. This suggests a pun on the prefix 'Tur-', which connects 'Turtle', the 'Turban' in the portrait, and the door to 'Twenty-seven'. The mention of the 'wise old tortoise' might also refer to the tortoise's direction or the 'slow and steady' path."
+            },
+            {
+                "step": 3,
+                "current_room": 27,
+                "available_doors": [
+                    9,
+                    13
+                ],
+                "visual_clues": "A statue (figure) stands on a pedestal inscribed with 'REQUIESCAT IN PACE?'. The statue's right hand gestures toward Door 13, which has a spade suit symbol above it. Its left hand points down toward a hole labeled '9'. A baseball bat leans near Door 13, and a shovel leans near an unnumbered heart-shaped doorway. A picture of a cat hangs on the far left wall.",
+                "textual_clues": "The text mentions visitors were 'intrigued with the entrance at the bottom of the excavation' (Hole 9) but 'ignored what the figure was trying to tell them,' suggesting the hole is a distraction and the statue's other gesture (pointing to Door 13) is the correct path. The phrase 'catch up' is a likely pun on 'ketchup,' a common indicator of a 'red herring' as warned by the cover, and the narrator specifically mentions 'herding the group through the door,' distinguishing it from the 'hole'."
+            },
+            {
+                "step": 4,
+                "current_room": 13,
+                "available_doors": [
+                    27,
+                    18,
+                    25
+                ],
+                "visual_clues": "The room is themed around time, featuring a large list of time units (Millennium to Minute), a sundial table, and a clock. The clock hands point to 6 and 12, signifying 6:00. Two skeletons flank the clock, with their hands positioned near the 9 and 3. The sum of the numbers the skeletons and the hour hand indicate (9 + 3 + 6) is 18.",
+                "textual_clues": "The text mentions the visitors were 'worried it might be Friday' and that 'the clock thought it was six in the evening.' In a 24-hour format, 6:00 PM is 18:00, which correlates directly with Door 18. The hint about being 'closer to the end of the week' suggests moving forward past the typical work week (Friday/6) towards the later numbers."
+            },
+            {
+                "step": 5,
+                "current_room": 18,
+                "available_doors": [
+                    3,
+                    13
+                ],
+                "visual_clues": "A prominent fireplace shaped like a giant face is on the left, with a hat resting on its mantel. The chair in the center casts a shadow that resembles a person in a top hat, and this shadow points directly towards the right side of the room. Above Door 3, there are musical notes on a treble clef that spell out 'F-A-C-E' in the spaces of the staff, mirroring the 'face' of the fireplace.",
+                "textual_clues": "The text mentions 'Someone\u2019s lost his hat' and 'fire\u2019s music'. The shadow of the man (someone) appears to be looking for or pointing towards something, and the fireplace (face) is missing its hat. The reference to music connects to the clefs and notes above the doors. The mention of 'ducking behind a curtain' suggests the exit is one of the curtained doorways."
+            },
+            {
+                "step": 6,
+                "current_room": 3,
+                "available_doors": [
+                    33,
+                    9,
+                    18
+                ],
+                "visual_clues": "The room is entirely mirrored, as indicated by the text 'all turned around' and the reversed labels. Door 33 is labeled 'EE' (mirrored 33), Door 18 is labeled '81' (mirrored 18), and the middle door is labeled '\u018e\u0418I\u0418' (mirrored NINE, representing Door 9). There is an octagon 'STOP' sign (labeled 'POTS'), a 'THIS WAY' sign pointing toward Door 18, and a scroll asking 'WHAT IS YOUR SIGN?'. A Sphinx poster with a question mark sits near Door 9, and there are cooking pans on the floor.",
+                "textual_clues": "The phrase 'missed the real sign while looking through the obvious' suggests that the 'STOP' and 'THIS WAY' signs are red herrings. The 'real sign' is likely the door number itself or the zodiac/symbolic 'sign' (the moon on Door 33 or the sun on Door 18). 'How many sides does that problem have?' refers to the octagon STOP sign, which has 8 sides. The transition text mentions passing through a pantry and down stairs, which describes the upcoming Room 33."
+            },
+            {
+                "step": 7,
+                "current_room": 33,
+                "available_doors": [
+                    3,
+                    16,
+                    35,
+                    37
+                ],
+                "visual_clues": "There are four doorways labeled with triangles. The numbers are 3, 16 (often misread as 31), 35, and 37. Above each door are cups containing symbols: Door 3 has a ring and a bee; Door 16 has a drum and the letter 'E'; Door 35 has a jug, a 'V', and a cross ('X'); Door 37 has two unidentified symbols. There are also musical instruments by the doors: a trumpet (3), a drum (16), a violin (35), and a lyre (37). A blueprint of a Conestoga wagon hangs above.",
+                "textual_clues": "The text mentions a 'room with no floor' and a 'narrow ledge,' which describes the pit layout. The phrase 'see all of the signs only from the center' refers to the symbols in the cups viewed from the central stack of books. 'They finally reached the door they wanted' suggests that the next room is the goal or leads directly to it."
+            }
+        ]
+    }
+]

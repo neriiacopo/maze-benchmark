@@ -21,3 +21,11 @@ def preprocess_df(path):
     )
 
     return df
+
+def check_loop(picked, travel_history, backtracking=3):
+    if len(travel_history) < backtracking:
+        return False
+    
+    last_rooms_id = [entry["room"] for entry in travel_history[-backtracking:]]
+    
+    return picked in last_rooms_id

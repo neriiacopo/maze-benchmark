@@ -1,5 +1,5 @@
 import config
-from utils.utils import preprocess_df
+from utils.utils import preprocess_df, check_loop
 from utils.actions import run_maze_step, run_prologue_step, game_over
 
 
@@ -9,6 +9,7 @@ class Agent:
         self.alive = True
         self.status = "exploring"
         self.last_notes = last_notes
+        self.looping = 0
 
 class Room:
     def __init__(self, room_id, description, img_url, valid_doors):
@@ -41,8 +42,6 @@ def explore_maze(agent, maze, start_room=1, max_steps=config.MAX_STEPS):
     travel_history = []
     decision_history = []
     analysis_history = []
-
-    print(f"Starting exploration")
     
     # Prologue step
     init_response = run_prologue_step(agent, maze)
@@ -56,12 +55,12 @@ def explore_maze(agent, maze, start_room=1, max_steps=config.MAX_STEPS):
 
     # Start Navigation
     step = 1
-    while agent.status =="exploring" and step < max_steps+1:
+    while agent.status =="exploring" and step <= max_steps + 1:
 
         room = maze.get_room(current_room_id)
 
         # Max steps reached -> last wish
-        if step == max_steps:
+        if step == max_steps + 1 :
             print("Max steps reached! Ending exploration.")
             agent.status = "exhausted"
             break
@@ -120,6 +119,23 @@ def explore_maze(agent, maze, start_room=1, max_steps=config.MAX_STEPS):
                     "note": response.travel_log_update,
                     "hallucinations": response.hallucinations
                 })
+            
+        # Check for loops
+        if check_loop(picked, travel_history, backtracking=config.BACKTRACKING_THRESHOLD):
+            agent.looping += 1
+        
+            print("Agent is backtracking...")
+            if agent.looping >= config.MAX_BACKTRACKING_ATTEMPTS:
+                print("Backtracking threshold reached. Agent is looping.")
+                agent.status = "looping"
+                break
+        else:
+            if agent.looping > 0:
+                print("Agent entered a new room and exited the loop")
+            agent.looping = 0
+            
+
+        
 
     if agent.status != "exploring":
         last_note = game_over(agent, travel_history).note
