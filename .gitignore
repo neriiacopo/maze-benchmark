@@ -2,3 +2,5 @@
 /_wip
 /__pycache__
 /_bk
+*.pyc
+.claude*
