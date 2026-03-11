@@ -66,8 +66,12 @@ class Call:
         else:
             schema = MazeResponse
             temp = 0.7  
-        
-        structured_llm = self.agent.model.bind(temperature=temp).with_structured_output(schema, method="function_calling")
+        print(self.agent.model)
+
+        use_method = "function_calling" 
+        if "127.0.0.1" in str(self.agent.model.openai_api_base  or ""):
+            use_method = "json_schema"
+        structured_llm = self.agent.model.bind(temperature=temp).with_structured_output(schema, method=use_method)
         
         prompt = self.make_prompt()
         chain = prompt | structured_llm
@@ -79,6 +83,7 @@ class Call:
                 
             except Exception as e:
                 print(f"⚠️ Step Failed: {type(e).__name__}")
+                print(e)
                 time.sleep(2)
         
         raise Exception(f"Model failed to respond after {config.MAX_ATTEMPTS_BEFORE_FAILED_CALL} attempts.")
