@@ -67,7 +67,7 @@ class Call:
             schema = MazeResponse
             temp = 0.7  
         
-        structured_llm = self.agent.model.bind(temperature=temp).with_structured_output(schema)
+        structured_llm = self.agent.model.bind(temperature=temp).with_structured_output(schema, method="function_calling")
         
         prompt = self.make_prompt()
         chain = prompt | structured_llm

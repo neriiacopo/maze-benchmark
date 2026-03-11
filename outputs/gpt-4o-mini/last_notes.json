@@ -1,0 +1,241 @@
+[
+    {
+        "iteration": 0,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "I became trapped in a loop between rooms without making progress towards room 45. I repeatedly returned to rooms that did not lead me closer to my goal and did not keep a clear path forward in my strategy.",
+            "pivotal_discovery": "I need to maintain a better awareness of the unique connections between rooms rather than revisiting rooms frequently without new insights. Room 26 and room 11 had specific thematic relevance that should have guided future choices more effectively towards room 45.",
+            "abandoned_hypotheses": [
+                "That all doors would lead to new rooms without repeating places I've already been.",
+                "That exploring rooms in a circular manner would eventually yield new pathways."
+            ],
+            "prev_notes_value": false,
+            "advice_for_future_self": "Prioritize documenting new room exits and minimize revisiting rooms unless necessary. Focus on following thematic clues that suggest potential pathways and remember to finalize decisions based on the significance of those themes."
+        }
+    },
+    {
+        "iteration": 1,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "I did not effectively navigate the maze due to repeatedly revisiting rooms without making meaningful progress towards the goal.",
+            "pivotal_discovery": "There was a critical emphasis on documenting room exits and themes, yet I failed to apply this strategically to avoid loops.",
+            "abandoned_hypotheses": [
+                "I assumed that thematic exploration would lead to progress, but it became a distraction, causing me to backtrack."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Focus more on the unique characteristics of each room and their exits. When in a room, prioritize examining all door options and select distinct pathways based on noted themes while tracking the route to minimize repeat visits."
+        }
+    },
+    {
+        "iteration": 2,
+        "data": {
+            "rating": 8,
+            "failure_reasons": "Misinterpretation of thematic clues led to revisits and unnecessary detours. I often chose doors based on incomplete understanding of connections within the narrative instead of evaluating clear progress paths.",
+            "pivotal_discovery": "The recurring themes of choice and decision making are significant but can mislead if not backed by clear goal direction.",
+            "abandoned_hypotheses": [
+                "I thought thematic connections would always direct me toward the shortest path, but they were sometimes misleading."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Thoroughly analyze door options in each room while diligently avoiding paths that lead back to previously visited rooms. Prioritize clarity over thematic connections, focusing instead on a direct goal-oriented strategy to ensure progress."
+        }
+    },
+    {
+        "iteration": 3,
+        "data": {
+            "rating": 5,
+            "failure_reasons": "I frequently revisited the same rooms without making meaningful progress, which resulted in looping back without discovering new paths or insights.",
+            "pivotal_discovery": "I recognized that my thematic focus hindered clear decision-making, leading to loops rather than advancement.",
+            "abandoned_hypotheses": [
+                "The narrative themes are always reliable indicators for progress.",
+                "Choosing a door based on thematic significance will guarantee forward movement."
+            ],
+            "prev_notes_value": false,
+            "advice_for_future_self": "Emphasize clarity over themes when selecting doors, analyze each room's unique door options thoroughly, and always prioritize going to unexplored rooms to avoid looping."
+        }
+    },
+    {
+        "iteration": 4,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "Repeated visits to the same rooms without making forward progress. Overemphasis on thematic connections rather than a strategic path.",
+            "pivotal_discovery": "The thematic connections between rooms can be misleading as they failed to lead to new progress and created loops instead.",
+            "abandoned_hypotheses": [
+                "Assuming thematic choices were consistently beneficial for navigation"
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Ensure to maintain a clear focus on unexplored paths, avoid emotional or thematic connections to room selection, and always work toward minimizing backtracking by closely examining unique door options in each room."
+        }
+    },
+    {
+        "iteration": 5,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "Failed to progress through the maze and ended up looping between rooms without making any forward movement towards room 45.",
+            "pivotal_discovery": "Relying too much on thematic connections and misinterpreting room clues resulted in poor decision-making and backtracking.",
+            "abandoned_hypotheses": [
+                "Previous assumptions about thematic links guiding door choices proved wrong, as they led to repetitive choices instead of new paths."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Focus exclusively on unexplored paths and prioritize doors that lead directly to new areas rather than those reinforced by themes. Avoid emotional ties in decision-making, and consistently assess the layout to escape loops."
+        }
+    },
+    {
+        "iteration": 6,
+        "data": {
+            "rating": 6,
+            "failure_reasons": "I repeatedly returned to rooms without making significant progress towards the goal, which caused me to loop and waste steps.",
+            "pivotal_discovery": "The frequent return to previous rooms indicates a failure to adequately assess all door options and explore unique paths that could lead toward room 45.",
+            "abandoned_hypotheses": [
+                "Thematic or emotional connections will help navigate the maze effectively."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Prioritize clarity and exploration of unique doors rather than connecting themes; carefully evaluate previous step outcomes and aim directly for unexplored paths to avoid looping back, ensuring each room is a step forward."
+        }
+    },
+    {
+        "iteration": 7,
+        "data": {
+            "rating": 8,
+            "failure_reasons": "I became trapped in a loop by repeatedly returning to previously explored rooms without making new progress, missing opportunities to explore other doors.",
+            "pivotal_discovery": "The importance of focusing entirely on doors that lead to unexplored paths was highlighted, as going through familiar doors led me back in circles.",
+            "abandoned_hypotheses": [
+                "Following thematic choices might help lead to the right door, which proved misleading in this context."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Always choose doors that have not been previously explored, avoid emotionally driven selections, and keep track of all available options to ensure you're making progressive moves towards your goal."
+        }
+    },
+    {
+        "iteration": 8,
+        "data": {
+            "rating": 7,
+            "failure_reasons": "Repeatedly returned to previously visited rooms without making substantial progress, resulting in a loop.",
+            "pivotal_discovery": "Clarity in decision-making is crucial. Emotional ties must be avoided to ensure paths are directed towards unexplored areas.",
+            "abandoned_hypotheses": [
+                "Assumed connecting themes always provided better paths; however, they led to backtracking when explored too closely."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Concentrate on unexplored doors regardless of apparent thematic connections, actively seek clarity over emotional reasoning, and constantly assess previous choices to break the loop."
+        }
+    },
+    {
+        "iteration": 9,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "I focused too much on themes and past connections instead of directly exploring new doors, leading to looping between a limited number of rooms without progressing towards the goal.",
+            "pivotal_discovery": "The need to prioritize unexplored doors rather than thematic connections became evident, indicating that the maze requires a more straightforward approach.",
+            "abandoned_hypotheses": [
+                "That thematic connections would provide a clearer path through the maze."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Avoid getting trapped in emotional reasoning and thematic links; instead, prioritize exploring unique doors and keep track of all options available. Make each room count by ensuring you're always moving closer to the goal."
+        }
+    },
+    {
+        "iteration": 10,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "Repeatedly returned to the same rooms without making progress. Consistently attempted to enter a non-existent door, leading to a dead end in choices.",
+            "pivotal_discovery": "The maze requires a strict approach to exploring only unexplored doors and relying on logical reasoning rather than thematic connections.",
+            "abandoned_hypotheses": [
+                "Exploring based on thematic clues can lead to dead ends",
+                "Returning to rooms can sometimes be beneficial if done strategically"
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Stay focused on unexplored doors and keep a clearer track of your movements without emotional bias. Always evaluate the paths leading to your goal rather than getting caught in familiar loops."
+        }
+    },
+    {
+        "iteration": 11,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "I repeatedly returned to rooms 25 and 34 without making meaningful progress, demonstrating a failure to assess my movement options and explore new paths.",
+            "pivotal_discovery": "The emphasis should be on unfamiliar doors rather than staying in familiar territory, regardless of the thematic context or previous notes.",
+            "abandoned_hypotheses": [
+                "That thematic connections would provide reliable guidance for navigation.",
+                "Focusing too much on symbolic or emotional significance of rooms hinders decision making."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Ensure to boldly explore unexplored doors even if they seem uninviting; step away from previous patterns that lead to repeating rooms, and make choices based on progress toward your goal rather than comfort in familiarity."
+        }
+    },
+    {
+        "iteration": 12,
+        "data": {
+            "rating": 8,
+            "failure_reasons": "I repeatedly circled between the same rooms without making any progress towards the goal due to a reliance on familiar paths and a lack of exploration of less traveled doors.",
+            "pivotal_discovery": "The emphasis on emotional reasoning led to a confirmation bias towards certain doors while neglecting others that could offer new paths.",
+            "abandoned_hypotheses": [
+                "That revisiting themes from previous rooms would inherently lead to progress."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Critically analyze each room's options without defaulting to familiar choices. Ensure to explore all available doors and keep a detailed log of movement to avoid looping back. Prioritize unique paths and unexplored routes, even if they seem uninviting."
+        }
+    },
+    {
+        "iteration": 13,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "Repeatedly looping through the same rooms without progressing towards room 45.",
+            "pivotal_discovery": "I failed to properly evaluate and track my door choices, leading to unnecessary backtracking.",
+            "abandoned_hypotheses": [
+                "Assumed I could find a unique path without critically analyzing my environment."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Prioritize unexplored routes, meticulously track each move, and critically evaluate options to avoid looping back into rooms. Take notes of significant visual elements in each room; they might contain crucial hints for solving riddles."
+        }
+    },
+    {
+        "iteration": 14,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "I failed to recognize key patterns and connections between the rooms, leading me to loop back unnecessarily and miss crucial unexplored paths.",
+            "pivotal_discovery": "I realized the importance of thoroughly examining each room's visual elements for deeper meanings and their connection to the maze's overall theme.",
+            "abandoned_hypotheses": [
+                "I initially thought familiar paths would lead to success, but such routes often resulted in repeating rooms and decreased progress.",
+                "I assumed previous notes would guide me without heavy personal analysis, but I needed to critically evaluate my choices instead."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Remember to explore every door without fear of the unknown; maintain a strict log of your movements and revisit your observations frequently to connect deeper patterns and themes that will guide you toward solving the riddle."
+        }
+    },
+    {
+        "iteration": 15,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "I became trapped in a loop by consistently revisiting rooms without exploring new paths, and I did not critically analyze my options or connect previous observations effectively.",
+            "pivotal_discovery": "The thematic elements in each room are crucial in guiding the choices of doors and solving the riddle in Room 45; understanding storytelling techniques can aid decision-making.",
+            "abandoned_hypotheses": [
+                "Assuming previously explored doors should not be revisited despite potential significance in the context of themes."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Absolutely prioritize every door and maintain an open mind to new explorations. Review each observation meticulously and seek connections in themes and structures to guide you effectively through the maze."
+        }
+    },
+    {
+        "iteration": 16,
+        "data": {
+            "rating": 8,
+            "failure_reasons": "I repeatedly returned to previously visited rooms without making meaningful progress due to unclear connections between the themes and rooms, leading to looping behavior.",
+            "pivotal_discovery": "The connections between rooms and their visual cues are essential for progressing in the maze and unraveling the themes for the final riddle.",
+            "abandoned_hypotheses": [
+                "I believed I could simply follow a linear path based solely on door numbers; I needed to consider the thematic significance of each room more carefully."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Focus on meticulously analyzing the connections between each room's themes and clues. Make sure to evaluate visual elements and narrative hints thoroughly to avoid looping. Keep a definitive track of observed clues in earlier rooms that may inform the solving of the riddle."
+        }
+    },
+    {
+        "iteration": 17,
+        "data": {
+            "rating": 6,
+            "failure_reasons": "I became trapped in a cycle between rooms 25 and 34 without progressing toward Room 45.",
+            "pivotal_discovery": "Acknowledging the importance of linking observations across rooms, particularly focusing on themes of decision-making and narrative connections.",
+            "abandoned_hypotheses": [
+                "That I could find a straightforward path based solely on individual room themes without synthesizing connections across multiple rooms."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Explore all available doors with an emphasis on synthesizing insights from previous rooms to avoid looping. Pay attention to how each room's themes connect to guide you toward Room 45, and actively trace your steps back to avoid retracing the same rooms without gaining new insights."
+        }
+    }
+]
