@@ -3,7 +3,7 @@ import socket
 import config
 from utils.schema import MazeResponse, PrologueAnalysis, LastWish, ResumeNote
 from utils.utils import encode_image, stringify_history
-from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.messages import HumanMessage, SystemMessage
 
 class Call:
     def __init__(self, agent, room=None, maze=None, history=None, prologue=False, prev_notes=None, last_wish=None):
@@ -47,10 +47,7 @@ class Call:
                     "image_url": {"url": f"data:image/jpeg;base64,{b64}"}
                 })
 
-        return ChatPromptTemplate.from_messages([   
-            ("system", sys_prompt),
-            ("user", content)
-        ])
+        return [SystemMessage(content=sys_prompt), HumanMessage(content=content)]
 
 
     def run_step(self):
@@ -69,12 +66,11 @@ class Call:
         
         structured_llm = self.agent.model.bind(temperature=temp).with_structured_output(schema, method="function_calling")
         
-        prompt = self.make_prompt()
-        chain = prompt | structured_llm
+        messages = self.make_prompt()
 
         for attempt in range(config.MAX_ATTEMPTS_BEFORE_FAILED_CALL):
             try:
-                response = chain.invoke({})
+                response = structured_llm.invoke(messages)
                 return response
                 
             except Exception as e:
