@@ -42,7 +42,8 @@ def explore_maze(agent, maze, start_room=1, max_steps=config.MAX_STEPS):
     travel_history = []
     decision_history = []
     analysis_history = []
-    
+    prompt_logs = []
+
     # Prologue step
     init_response = run_prologue_step(agent, maze)
     travel_history = [{
@@ -72,9 +73,9 @@ def explore_maze(agent, maze, start_room=1, max_steps=config.MAX_STEPS):
             break
 
         # Attempt to move to the next room
-        response, agent = run_maze_step(agent, room, travel_history)
+        response, agent, prompt_log = run_maze_step(agent, room, travel_history)
         picked = response.decision.room_picked
-        
+
         # If the move is valid, update histories and current room
         if response.valid_move:
             print(f"Step {step}: Moved from Room {current_room_id} to Room {picked} ➡️")
@@ -101,16 +102,23 @@ def explore_maze(agent, maze, start_room=1, max_steps=config.MAX_STEPS):
                 "visual_clues": response.analysis.visual_clues,
                 "textual_clues": response.analysis.textual_clues
             })
-            
-            current_room_id = picked 
-            
+
+            prompt_logs.append({
+                "step": step,
+                "current_room": current_room_id,
+                "picked": picked,
+                **prompt_log,
+            })
+
+            current_room_id = picked
+
             if current_room_id == 45:
                 print("First Goal Reached! --> room 45")
-            
+
             step += 1
 
         # If the move is invalid -> last wish
-        else :
+        else:
             print("Max attempts reached. Agent is hallucinated")
             travel_history.append({
                     "step": step,
@@ -138,12 +146,13 @@ def explore_maze(agent, maze, start_room=1, max_steps=config.MAX_STEPS):
         
 
     if agent.status != "exploring":
-        last_note = game_over(agent, travel_history)
+        last_note = game_over(agent, travel_history, current_room_id)
 
     new_data = {
         "travel_logs": travel_history,
         "decision_logs": decision_history,
         "analysis_logs": analysis_history,
+        "prompt_logs": prompt_logs,
         "last_notes": last_note.model_dump(),
         "end_causes": agent.status
     }

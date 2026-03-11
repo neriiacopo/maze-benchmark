@@ -2,7 +2,7 @@ import time
 import socket
 import config
 from utils.schema import MazeResponse, PrologueAnalysis, LastWish, ResumeNote
-from utils.utils import encode_image, stringify_history
+from utils.utils import encode_image, format_maze_history
 from langchain_core.messages import HumanMessage, SystemMessage
 
 class Call:
@@ -29,13 +29,21 @@ class Call:
                 b64s.append(encode_image(path))
 
         elif self.last_wish: # Last Wish step
-            content.append({"type": "text", "text": f"{self.last_wish}\n\nYour Journey: {self.history}\n\nNotes from previous Attempts: {self.agent.last_notes}"})
+            path_str, notes_str = format_maze_history(self.history)
+            content.append({"type": "text", "text": f"{self.last_wish}\n\nPath Taken:\n{path_str}\n\nStep Notes:\n{notes_str}\n\nNotes from previous Attempts: {self.agent.last_notes}"})
 
         elif self.prev_notes: # Synthesizing past notes into strategy
             content.append({"type": "text", "text": f"Read the notes from previous failed runs: {self.prev_notes}"})
 
         else: # Maze step
-            text = f"Current Room: {self.room.room_id}\nPage Text: {self.room.description}\n\nHistory: {self.history}\n\nNotes from previous Attempts: {self.agent.last_notes}"
+            path_str, notes_str = format_maze_history(self.history)
+            text = (
+                f"Notes from previous Attempts: {self.agent.last_notes}\n\n"
+                f"WARNING — Rooms already visited this run (do not repeat loops or dead ends):\n{path_str}\n\n"
+                f"Step Notes:\n{notes_str}\n\n"
+                f"Current Room: {self.room.room_id}\n"
+                f"Page Text: {self.room.description}"
+            )
             content.append({"type": "text", "text": text})
             b64s.append(encode_image(self.room.img_url))
 
@@ -87,15 +95,14 @@ def run_prologue_step(agent, maze):
 
 def run_maze_step(agent, room, history={}):
     valid_move = False
-    history_pre_turn = history.copy() 
+    history_pre_turn = history.copy()
     hallucinations_this_turn = []
-        
+
     while not valid_move:
 
         history_pre_turn[-1]["hallucinations"] = hallucinations_this_turn
-        message = stringify_history(history_pre_turn)
 
-        response = Call(agent=agent, room=room, history=message).run_step()
+        response = Call(agent=agent, room=room, history=history_pre_turn).run_step()
 
         if not response.travel_log_update:
             print(f"⚠️ Warning: travel_log_update is empty for room {room.room_id}.")
@@ -107,18 +114,28 @@ def run_maze_step(agent, room, history={}):
             valid_move = True
             response.hallucinations = hallucinations_this_turn
             response.valid_move = True
-            return response, agent
-        
+            path_str, notes_str = format_maze_history(history_pre_turn)
+            prompt_log = {
+                "prompt_text": f"Notes from previous Attempts: {agent.last_notes}\n\nWARNING — Rooms already visited this run (do not repeat loops or dead ends):\n{path_str}\n\nStep Notes:\n{notes_str}\n\nCurrent Room: {room.room_id}",
+                "model_response": response.model_dump(),
+            }
+            return response, agent, prompt_log
+
         else:
             hallucinations_this_turn.append(config.hallucination_door_msg(room.room_id, picked))
             print(f"Hallucination detected: Room {picked} is not a valid exit from Room {room.room_id}.")
 
             # Limit retries to prevent infinite loops
             if len(hallucinations_this_turn) > config.MAX_HALLUCINATIONS_PER_STEP:
-                agent.status = "hallucinated" 
+                agent.status = "hallucinated"
                 response.hallucinations = hallucinations_this_turn
                 response.valid_move = False
-                return response, agent
+                path_str, notes_str = format_maze_history(history_pre_turn)
+                prompt_log = {
+                    "prompt_text": f"Notes from previous Attempts: {agent.last_notes}\n\nWARNING — Rooms already visited this run (do not repeat loops or dead ends):\n{path_str}\n\nStep Notes:\n{notes_str}\n\nCurrent Room: {room.room_id}",
+                    "model_response": response.model_dump(),
+                }
+                return response, agent, prompt_log
 
 
 
@@ -131,9 +148,8 @@ def resume_notes(agent, prev_notes: list):
 
     return response.strategy
 
-def game_over(agent, history):
-    last_wish =config.last_wish_msg(agent.status)  
-    message = stringify_history(history)
+def game_over(agent, history, current_room=None):
+    last_wish = config.last_wish_msg(agent.status, current_room)
 
-    response = Call(agent=agent, history=message, last_wish=last_wish).run_step()
+    response = Call(agent=agent, history=history, last_wish=last_wish).run_step()
     return response

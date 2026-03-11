@@ -12,15 +12,18 @@ def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
-def stringify_history(history):
+def format_maze_history(history):
+    """Returns (path_str, notes_str) for use in the maze step prompt."""
+    path_lines = []
+    note_lines = []
 
-    # Errors are extracted only for current room
-    hallucinations = history[-1].get("hallucinations", []) if history else []
+    for s in history:
+        path_lines.append(f"STEP: {s['step']} | ROOM: {s['room']}")
+        errors = s.get("hallucinations", [])
+        errors_str = f" | ERRORS: {'; '.join(errors)}" if errors else ""
+        note_lines.append(f"STEP: {s['step']} | NOTE: {s.get('note', '')}{errors_str}")
 
-    errors_str = "; ".join(hallucinations) if hallucinations else "NONE"
-    message = [f"STEP {s['step']} | ROOM: {s['room']} | NOTE: {s['note']} | ERRORS: {errors_str}" for i, s in enumerate(history)]
-
-    return message
+    return "\n".join(path_lines), "\n".join(note_lines)
 
 def preprocess_df(path):
     df = pd.read_csv(path, sep="\t")

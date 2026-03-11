@@ -39,8 +39,9 @@ class LastWish(BaseModel):
     )
     prev_notes_value: bool = Field(description="Were the previous notes helpful or misleading?")
     advice_for_future_self: str = Field(
-        description="Which advice would you give to your future self to help them succeed in the maze where you failed?"
+        description="Which advice would you give to your future self? REQUIRED: If you looped, name the exact rooms (e.g. 'Room A → Room B → Room A = LOOP'). If you found a dead end, name it explicitly (e.g. 'Room C = DEAD END, do not enter'). List all dangerous rooms before any other advice."
     )
+
 
 shared_notes = ["failure_reasons", "pivotal_discovery", "abandoned_hypotheses", "advice_for_future_self"]
 
