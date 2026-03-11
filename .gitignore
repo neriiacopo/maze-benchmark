@@ -6,4 +6,8 @@
 *.pyc
 .claude*
 outputs*/*
+<<<<<<< HEAD
 _*
+=======
+!outputs/.gitkeep
+>>>>>>> d813051ec9e9b9fd18aca144d2f39158a7f3d847
