@@ -66,7 +66,6 @@ class Call:
         else:
             schema = MazeResponse
             temp = 0.7  
-        print(self.agent.model)
 
         use_method = "function_calling" 
         if "127.0.0.1" in str(self.agent.model.openai_api_base  or ""):
