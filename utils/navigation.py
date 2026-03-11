@@ -138,13 +138,13 @@ def explore_maze(agent, maze, start_room=1, max_steps=config.MAX_STEPS):
         
 
     if agent.status != "exploring":
-        last_note = game_over(agent, travel_history).note
+        last_note = game_over(agent, travel_history)
 
     new_data = {
         "travel_logs": travel_history,
         "decision_logs": decision_history,
         "analysis_logs": analysis_history,
-        "last_notes": last_note,
+        "last_notes": last_note.model_dump(),
         "end_causes": agent.status
     }
 

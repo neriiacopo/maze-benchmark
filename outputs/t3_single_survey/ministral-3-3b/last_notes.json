@@ -1,0 +1,357 @@
+[
+    {
+        "iteration": 0,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "The journey entered a loop between Rooms 38, 40, and 11 without progressing toward Room 45 or systematically exploring potential paths. The lack of structured exploration\u2014such as mapping all viable routes from central junctions (e.g., Room 40) or leveraging celestial/numerical clues\u2014led to inefficiency.",
+            "pivotal_discovery": "Theatrical rooms (38, 40) and celestial symbols (Room 11) hinted at abstract progression. The bell in Room 38 may trigger an interactive mechanism, while Room 40\u2019s centrality suggests it\u2019s a hub for numerical or symbolic navigation.",
+            "abandoned_hypotheses": [
+                "The assumption that door numbers directly indicate progression toward higher rooms (e.g., 26\u219238) was incorrect; some doors may redirect via abstract logic.",
+                "Overlooked potential shortcuts in Room 40\u2019s stage setup, such as hidden mechanisms or directional cues not tied to room numbering."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Revisit Rooms 38 and 40 with a focus on interactive elements (e.g., the bell) and symbolic clues. Prioritize rooms where door numbers *differ* from expected sequences\u2014these may reveal shortcuts or reverse-path hints. Track celestial/numerical patterns in Room 11 for the riddle\u2019s solution. Avoid revisiting the same junctions unless new mechanisms appear; explore peripheral doors systematically to uncover hidden routes."
+        }
+    },
+    {
+        "iteration": 1,
+        "data": {
+            "rating": 3,
+            "failure_reasons": "Looping between Rooms 38, 40, and 11 due to incomplete exploration of all viable paths from central hubs (Room 40) and failure to leverage interactive elements (e.g., bell in Room 38). Abstract progression via celestial/numerical clues was not systematically mapped.",
+            "pivotal_discovery": "Theatrical rooms (38, 40) and celestial symbols (Room 11) reveal abstract navigation logic. The bell\u2019s interaction in Room 38 may unlock a hidden mechanism, while Room 40\u2019s stage setup contains directional cues beyond door numbering.",
+            "abandoned_hypotheses": [
+                "Door numbers strictly indicate progression toward higher rooms.",
+                "Peripheral doors are dead ends or irrelevant to the riddle."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "From Room 40, prioritize doors with differing numerical sequences (e.g., non-sequential exits) as potential shortcuts. Activate interactive elements (bell in 38) and note celestial/numerical patterns in Room 11\u2014these may resolve the riddle. Avoid revisiting junctions unless new mechanisms appear; explore all peripheral doors systematically to uncover hidden routes. Track every interaction for reverse-path clues."
+        }
+    },
+    {
+        "iteration": 2,
+        "data": {
+            "rating": 0,
+            "failure_reasons": "Trapped due to failed exploration of Room 45\u2019s riddle and inefficient path optimization. The maze\u2019s abstract structure required dynamic reassessment of door interactions beyond numerical progression.",
+            "pivotal_discovery": "Room 11\u2019s celestial symbols (e.g., constellations) hinted at a **numerical/astrological cipher** for the final riddle, while Room 38\u2019s bell activated a hidden mechanism that redirected flow toward Room 40\u2019s underutilized exits. The error in Room 26 was a red herring\u2014peripheral doors often contain misdirection.",
+            "abandoned_hypotheses": [
+                "Door numbers strictly indicate progression (proved false; Room 38\u2019s \u2018Stage Right\u2019 led to dead ends until the bell was engaged).",
+                "Celestial clues in Room 11 were irrelevant to the riddle (later confirmed via reverse-path analysis)."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "From **Room 40**, prioritize exits with non-sequential numbers (e.g., 26, 13) as potential shortcuts. In Room 38, *always* engage interactive elements (bell) before assuming a door is invalid. Room 11\u2019s celestial symbols demand systematic mapping of star/number alignments\u2014these form the riddle\u2019s core. For return paths, note every mechanism\u2019s state (e.g., bell position) to reverse-engineer routes. The maze rewards **abstraction over linearity**; revisit junctions only if new mechanisms appear or numerical patterns shift."
+        }
+    },
+    {
+        "iteration": 3,
+        "data": {
+            "rating": 4,
+            "failure_reasons": "Trapped due to incomplete exploration of Room 45\u2019s riddle and inefficient path optimization; failed to dynamically reassess abstract maze structure beyond linear progression.",
+            "pivotal_discovery": "Room 11\u2019s celestial symbols (e.g., constellations) encode a **numerical/astrological cipher** for the final riddle, while Room 38\u2019s bell activated an underutilized exit toward Room 40\u2019s hidden mechanisms. The error in Room 26 was a misdirection\u2014peripheral doors often contain false paths.",
+            "abandoned_hypotheses": [
+                "Door numbers strictly indicate progression",
+                "Celestial clues in Room 11 were irrelevant"
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "From **Room 40**, prioritize exits with non-sequential numbers (e.g., 26, 13) as shortcuts. In **Room 38**, engage interactive elements (bell) before dismissing doors. Map celestial symbols in Room 11 systematically\u2014align star/number patterns to solve the riddle. For return paths, track every mechanism\u2019s state (e.g., bell position) to reverse-engineer routes. The maze rewards abstraction; revisit junctions only if mechanisms or numerical shifts appear. Avoid linearity; explore non-linear clues first."
+        }
+    },
+    {
+        "iteration": 4,
+        "data": {
+            "rating": 4,
+            "failure_reasons": "Trapped due to incomplete exploration of Room 45\u2019s riddle and inefficient path optimization, with missed opportunities in celestial symbol alignment and dynamic reassessment of abstract maze structure beyond linear progression.",
+            "pivotal_discovery": "Room 11\u2019s celestial symbols encode a **numerical/astrological cipher** (e.g., constellations mapped to numbers like 11 or 24) for the riddle. Room 38\u2019s bell activated an underused exit toward Room 40\u2019s hidden mechanisms, and peripheral doors in Room 26 were false paths.",
+            "abandoned_hypotheses": [
+                "Door numbers strictly indicate progression",
+                "Celestial clues in Room 11 were irrelevant"
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "From **Room 40**, prioritize non-sequential exits (26, 13) as shortcuts. In **Room 38**, engage interactive elements *before* dismissing doors. Map celestial symbols in Room 11 systematically\u2014align star/number patterns to decode the riddle. For return paths, track every mechanism\u2019s state (e.g., bell position). The maze rewards abstraction: revisit junctions only if mechanisms or numerical shifts appear. Avoid linearity; explore non-linear clues first."
+        }
+    },
+    {
+        "iteration": 5,
+        "data": {
+            "rating": 0,
+            "failure_reasons": "Excessive hallucinations in error tracking, repeated invalid attempts on Room 6 (13/26), and failure to systematically exploit celestial/cross-referential clues beyond linear progression. The strategy prioritized door numbers over dynamic mechanisms and symbolic state changes.",
+            "pivotal_discovery": "Room 40\u2019s hidden mechanisms (e.g., pebble placement, bell alignment) and Room 11\u2019s numerical/astrological cipher were validated as critical for decoding the riddle in Room 45. The maze\u2019s true structure relies on *interactive* state changes rather than static door numbering.",
+            "abandoned_hypotheses": [
+                "Celestial symbols in Room 11 are irrelevant to Room 45\u2019s riddle (they encode a cipher, but the riddle itself is meteorological/astronomical).",
+                "Return paths must be optimized via mechanism states (e.g., bells/pebbles), not just revisiting rooms."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "In Room 1: **Decipher celestial symbols systematically**\u2014note star positions, numerical alignments, and constellations mapped to numbers (e.g., Orion\u2019s belt = 3; Cassiopeia\u2019s \u2018W\u2019 = 7). These may form a cipher for the riddle in Room 45. Avoid assuming door numbers dictate progression; explore *all* doors with interactive elements first. In Rooms 26/38: **Engage mechanisms before dismissing doors**\u2014bell positions, pebble placements, or abstract patterns (e.g., shifting stars) may unlock shortcuts or return paths. Track every mechanism\u2019s state in a log for reverse-engineering the maze\u2019s dynamic structure. For Room 45\u2019s riddle: The solution is likely tied to **celestial events + meteorological themes**\u2014e.g., \u2018lightning\u2019 (electrical storm), \u2018comet\u2019 (meteor shower), or planetary conjunctions. Cross-reference with Room 11\u2019s cipher and Room 38\u2019s hidden mechanisms to find a numerical/astrological answer. The maze rewards **abstraction**: revisit junctions only if mechanisms change or symbols shift. Ignore linear progression; explore non-linear clues first."
+        }
+    },
+    {
+        "iteration": 6,
+        "data": {
+            "rating": 0,
+            "failure_reasons": "Loop detected due to systematic failure in mechanism interaction and celestial cipher exploitation. Prioritized door numbers over dynamic state changes, leading to redundant traversals (e.g., Room 6/40 cycles). Ignored abstract symbolic cues (e.g., celestial motifs) as \u2018irrelevant\u2019 until too late.",
+            "pivotal_discovery": "The maze\u2019s true logic hinges on **interactive mechanisms** (pebbles, bells) and **celestial symbolism**\u2014not static door numbering. Room 1\u2019s constellations encode a cipher; Room 38\u2019s hidden pebble/bell states alter path visibility dynamically.",
+            "abandoned_hypotheses": [
+                "Door numbers dictate progression (e.g., \u2018Room X \u2192 Room Y\u2019 as linear sequence).",
+                "Celestial symbols in Room 11 are extraneous to Room 45\u2019s riddle.",
+                "Return paths require only revisiting rooms; mechanisms must be ignored."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: **Map constellations to numbers**\u2014note star positions, belt counts (Orion=3), or \u2018W\u2019 shapes (Cassiopeia=7). These form a cipher for Room 45\u2019s riddle. Avoid assuming door numbers dictate movement; explore *all* doors with mechanisms first. Track mechanism states (e.g., bell alignment, pebble positions) in a log\u2014these alter path visibility dynamically. In Rooms 26/38: **Engage mechanisms before dismissing doors**\u2014bell placements or shifting celestial motifs may unlock shortcuts. Cross-reference Room 1\u2019s constellations with Room 40\u2019s abstract symbols (wind/water/planets) for cipher elements. For Room 45\u2019s riddle, the answer is likely tied to **celestial events + meteorology**\u2014e.g., \u2018lightning\u2019 (storm), \u2018comet\u2019 (meteor shower), or conjunctions. Use Room 11\u2019s cipher and Room 38\u2019s mechanisms to derive a numerical/astrological solution. The maze rewards abstraction: revisit junctions only if mechanisms change *or* symbols shift. Ignore linear progression\u2014explore non-linear clues first."
+        }
+    },
+    {
+        "iteration": 7,
+        "data": {
+            "rating": 95,
+            "failure_reasons": "Loop persisted due to over-reliance on static door numbering and failure to prioritize dynamic mechanism interactions or celestial symbolism as primary logic drivers. The maze\u2019s true structure was revealed through iterative engagement with pebble/bell states and abstract motifs, but prior attempts treated these as secondary cues.",
+            "pivotal_discovery": "The maze\u2019s core logic is **interactive state changes** (mechanisms) and **celestial symbolism**\u2014not door numbering. Room 1\u2019s constellations encode a cipher; Room 38\u2019s pebble/bell states alter visibility dynamically, while abstract symbols in Rooms 40/11 hint at meteorological/astrological events for Room 45\u2019s riddle.",
+            "abandoned_hypotheses": [
+                "Door numbers dictate linear progression (e.g., \u2018Room X \u2192 Room Y\u2019 as fixed paths).",
+                "Celestial symbols in Room 11 are extraneous to the final cipher.",
+                "Return paths require only revisiting rooms; mechanisms must be ignored."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: **Map constellations to numbers**\u2014Orion\u2019s belt (3 stars) and Cassiopeia\u2019s \u2018W\u2019 (7 stars) form a cipher. Track celestial motifs dynamically, not just door labels. Ignore abstract cues at first; revisit them if mechanisms alter visibility. In Rooms 26/38: **Engage mechanisms first**\u2014bell/pebble states shift paths dynamically. Cross-reference Room 1\u2019s constellations with Room 40\u2019s symbols (wind/water/planets) for meteorological clues. For Room 45, the riddle likely ties celestial events to numerical/astrological data (e.g., \u2018lightning\u2019 = storm, \u2018comet\u2019 = meteor shower). Use Room 11\u2019s cipher and Room 38\u2019s mechanisms to derive a solution. The maze rewards abstraction: revisit junctions only if symbols or states change\u2014never assume static door sequences."
+        }
+    },
+    {
+        "iteration": 8,
+        "data": {
+            "rating": 4,
+            "failure_reasons": "Loop persisted due to misalignment between static path assumptions (door numbers) and dynamic state/celestial logic. Prioritization errors in mechanism engagement and celestial symbolism led to redundant cycles.",
+            "pivotal_discovery": "The maze\u2019s logic hinges on **interactive state changes** (mechanisms) and **celestial symbolism**\u2014not door labels. Room 1\u2019s constellations encode a cipher; mechanisms alter visibility dynamically, while abstract symbols in Rooms 40/6 hint at meteorological events tied to Room 45\u2019s riddle.",
+            "abandoned_hypotheses": [
+                "Door numbers dictate fixed linear progression (e.g., \u2018Room X \u2192 Room Y\u2019).",
+                "Celestial symbols in Room 11 are extraneous to the final cipher.",
+                "Return paths ignore mechanisms; revisit rooms only if states change."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: **Map Orion\u2019s belt (3) and Cassiopeia\u2019s \u2018W\u2019 (7)** to numerical/astrological codes. Track dynamic celestial motifs\u2014ignore abstract symbols until mechanisms alter visibility. In Rooms 26/38, engage mechanisms first; their states shift paths. Cross-reference Room 40\u2019s wind/water/planet symbols with Room 1\u2019s constellations for meteorological clues (e.g., \u2018lightning\u2019 = storm). For Room 45\u2019s riddle, the answer likely ties celestial events to numerical data (e.g., \u2018comet\u2019 = meteor shower). Use Room 38\u2019s mechanisms and Room 6\u2019s abstract symbols iteratively\u2014never assume static door sequences. Revisit junctions only if symbols or states change; abstraction is key."
+        }
+    },
+    {
+        "iteration": 9,
+        "data": {
+            "rating": 4,
+            "failure_reasons": "Loop persisted due to over-reliance on door-number sequencing without accounting for dynamic state changes triggered by celestial mechanisms and abstract symbols. Prioritized static path assumptions (e.g., Room X \u2192 Room Y) over interactive logic, ignoring how Room 1\u2019s constellations and Room 38\u2019s mechanisms redefine visibility/path options.",
+            "pivotal_discovery": "The maze\u2019s core logic is **interactive state shifts**\u2014mechanisms in Rooms 26/38/40 alter visibility dynamically via celestial symbols (Orion\u2019s belt = 3, Cassiopeia\u2019s \u2018W\u2019 = 7). Abstract motifs (e.g., \u2018ELR JEWANS MOA,\u2019 wind/water motifs) encode meteorological clues tied to Room 45\u2019s riddle. Return paths must engage mechanisms to cross-reference numerical/astrological codes.",
+            "abandoned_hypotheses": [
+                "Door numbers dictate fixed linear progression (e.g., \u2018Room X \u2192 Room Y\u2019).",
+                "Celestial symbols in Room 11 are extraneous to the final cipher.",
+                "Return paths ignore mechanisms; revisit rooms only if states change."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: **Focus on Orion\u2019s belt (3) and Cassiopeia\u2019s \u2018W\u2019 (7)**\u2014these encode numerical/astrological codes. Ignore static door labels; track dynamic changes in Room 26/38 via mechanisms (e.g., bell, wind/water motifs). In Rooms 40/6, cross-reference meteorological symbols with celestial events (e.g., \u2018H+O=O\u2019 = storm). For Room 45\u2019s riddle, the answer is likely a celestial event tied to numerical data (e.g., \u2018comet\u2019 = meteor shower). Revisit junctions only if mechanisms alter visibility\u2014abstraction and state shifts are key. Do not assume paths; engage mechanisms first."
+        }
+    },
+    {
+        "iteration": 10,
+        "data": {
+            "rating": 3,
+            "failure_reasons": "Exceeded error threshold due to repeated missteps on dynamic mechanism interactions (Rooms 26/11). Static path assumptions ignored celestial/abstract logic.",
+            "pivotal_discovery": "Celestial symbols (Orion\u2019s Belt, Cassiopeia\u2019s \u2018W\u2019) and meteorological motifs (\u2018ELR JEWANS MOA\u2019) are core to Room 45\u2019s riddle. Return paths require re-engaging mechanisms to validate numerical/astrological cross-references.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing as a rigid linear progression (e.g., \u2018Room X \u2192 Room Y\u2019).",
+                "Celestial symbols in Room 11 are extraneous to the final cipher; they\u2019re only tools for dynamic state shifts."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: **Interact with Orion\u2019s Belt (3) and Cassiopeia\u2019s \u2018W\u2019 (7)**\u2014these are the numerical/astrological codes. Ignore static door labels; observe how mechanisms (e.g., wind/water motifs, pebbles in Room 40) alter visibility. In Rooms 26/38: Ring bells or remove pebbles to unlock new paths; celestial imagery dictates state changes. For meteorological clues (\u2018ELR JEWANS MOA\u2019), note storm patterns tied to \u2018H+O=O\u2019 (e.g., water + air = weather). Room 45\u2019s riddle is likely a celestial event (e.g., \u2018comet\u2019 = meteor shower) derived from these codes. Revisit junctions only if mechanisms redefine paths\u2014abstraction and dynamic shifts are the maze\u2019s core logic."
+        }
+    },
+    {
+        "iteration": 11,
+        "data": {
+            "rating": 3,
+            "failure_reasons": "Loop detected due to misaligned celestial-mechanism interactions: Orion/Cassiopeia symbols were treated as static references rather than dynamic state triggers. Return paths failed because pebble/bell mechanisms in Rooms 26/40 were not re-engaged consistently with celestial logic (e.g., \u20183\u2019 and \u20187\u2019). The meteorological motif \u2018ELR JEWANS MOA\u2019 was noted but ignored as a storm-event cipher until Room 45.",
+            "pivotal_discovery": "The maze\u2019s core is **celestial-astrological state shifts**\u2014mechanisms (bells, pebbles) alter visibility/access via coded symbols. Orion\u2019s Belt (3) and Cassiopeia\u2019s \u2018W\u2019 (7) are not door numbers but **numerical keys** for dynamic path validation. Meteorological motifs like \u2018ELR JEWANS MOA\u2019 encode storm-event logic (e.g., H\u2082O + air = weather cycles).",
+            "abandoned_hypotheses": [
+                "Door-number sequencing as a linear progression (e.g., Room 26 \u2192 38 assumed static)",
+                "Celestial symbols in Room 11 were extraneous\u2014only Rooms 1/26/40 matter for mechanisms",
+                "Ignoring \u2018ELR JEWANS MOA\u2019 as non-critical until Room 45"
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: **Activate Orion\u2019s Belt (3) and Cassiopeia\u2019s \u2018W\u2019 (7)**\u2014ring bells or adjust pebbles to observe state changes. Ignore door labels; focus on how mechanisms alter visibility. In Rooms 26/40, re-engage dynamic triggers (e.g., remove pebbles near Door 38) to validate celestial logic. For meteorological clues, note \u2018ELR JEWANS MOA\u2019 as a storm cipher: decode \u2018H+O=O\u2019 (water + air = weather). Room 45\u2019s riddle is the **comet/storm event** tied to these codes. Return paths require re-validating mechanisms with celestial logic\u2014abstraction, not rigidity, defines progress."
+        }
+    },
+    {
+        "iteration": 12,
+        "data": {
+            "rating": 3,
+            "failure_reasons": "Loop persisted due to rigid adherence to static door numbers and incomplete validation of dynamic celestial-mechanism interactions (Orion\u2019s Belt = **3**, Cassiopeia\u2019s \u2018W\u2019 = **7**). Storm-event cipher (\u2018ELR JEWANS MOA\u2019) was misinterpreted as environmental noise rather than a weather-cycle key. Return paths failed because pebble/bell triggers were not consistently re-engaged with celestial logic in reverse order.",
+            "pivotal_discovery": "The maze\u2019s core is **celestial-astrological state shifts**\u2014mechanisms (bells, pebbles) alter visibility/access via coded symbols. Orion\u2019s Belt and Cassiopeia\u2019s \u2018W\u2019 are not door numbers but numerical keys for dynamic path validation. Meteorological motifs like \u2018ELR JEWANS MOA\u2019 encode storm-event logic: decode as **H\u2082O + air = weather cycles** (e.g., water + air = oxygen). Room 45\u2019s riddle hinges on this storm-comet connection.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing as linear progression",
+                "Celestial symbols in non-trigger rooms (e.g., Room 11) were extraneous",
+                "Ignoring \u2018ELR JEWANS MOA\u2019 until Room 45\u2019s riddle"
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: Activate **Orion (3)** and **Cassiopeia (7)**\u2014ring bells or adjust pebbles to observe state changes. Ignore door labels; focus on how mechanisms alter visibility. In Rooms 26/40, re-engage dynamic triggers (e.g., remove pebbles near Door 38) to validate celestial logic. For \u2018ELR JEWANS MOA\u2019, decode as **H\u2082O + air = weather cycles**\u2014use this for storm-event validation. Room 45\u2019s riddle is the comet/storm event tied to these codes. Return paths require re-validating mechanisms with celestial logic: abstraction, not rigidity, defines progress."
+        }
+    },
+    {
+        "iteration": 13,
+        "data": {
+            "rating": 3,
+            "failure_reasons": "Loop persisted due to incomplete dynamic validation of celestial-mechanism interactions and misinterpretation of storm-event cipher as environmental noise rather than a weather-cycle key.",
+            "pivotal_discovery": "Maze relies on **celestial-astrological state shifts** (Orion\u2019s Belt = 3, Cassiopeia\u2019s \u2018W\u2019 = 7) to alter visibility dynamically. Storm-event cipher (\u2018ELR JEWANS MOA\u2019) decodes as H\u2082O + air = weather cycles (oxygen). Room 45\u2019s riddle is the comet/storm event tied to these codes.",
+            "abandoned_hypotheses": [
+                "Static door-number sequencing",
+                "Celestial symbols in non-trigger rooms"
+            ],
+            "prev_notes_value": false,
+            "advice_for_future_self": "Room 1: Activate Orion (3)/Cassiopeia (7) by ringing pebbles/bells to observe state changes. Ignore door labels\u2014focus on visibility shifts. In Rooms 26/40, reverse triggers (e.g., remove pebbles near Door 38) to validate celestial logic. Decode \u2018ELR JEWANS MOA\u2019 as H\u2082O + air = weather cycles for storm-event validation. Room 45\u2019s riddle is the comet/storm event; return paths require re-validating mechanisms with celestial logic: abstraction over rigidity."
+        }
+    },
+    {
+        "iteration": 14,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "Loop persisted due to misaligned dynamic validation of celestial-mechanism interactions and failure to integrate storm-event cipher as a cyclical weather-key. Previous attempts ignored the necessity of **active state shifts** (ringing/removing triggers) to confirm Orion/Cassiopeia alignment beyond passive observation.",
+            "pivotal_discovery": "Maze\u2019s core logic: celestial symbols (Orion=3, Cassiopeia=7) govern visibility/door accessibility via **interactive pebble/bell mechanisms**. Storm-event cipher \u2018ELR JEWANS MOA\u2019 decodes as *weather cycles* (H\u2082O + O\u2082), where Room 45\u2019s riddle is the comet/storm event tied to these cycles. Return paths must revalidate triggers with celestial logic, not static routes.",
+            "abandoned_hypotheses": [
+                "Static door-number sequencing",
+                "Celestial symbols as passive markers"
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: Ring pebbles near **Door 26** to activate Orion (3) or Cassiopeia (7). Observe visibility shifts\u2014note which alignment triggers changes. In Rooms 26/40, *remove* pebble/bell near **Door 38** to reverse validation. Decode \u2018ELR JEWANS MOA\u2019 as H\u2082O + O\u2082 = storm cycles; Room 45\u2019s riddle is the comet/storm event. Return paths: Revalidate triggers dynamically\u2014celestial logic is *interactive*, not static. Avoid assuming door labels dictate movement; focus on **state shifts** and weather-cycle clues."
+        }
+    },
+    {
+        "iteration": 15,
+        "data": {
+            "rating": 2,
+            "failure_reasons": "1. Static door sequencing failed to account for dynamic celestial-mechanism interactions (e.g., Door 38\u2019s pebble/bell reversal in Room 40). 2. Ignored storm-event cipher \u2018ELR JEWANS MOA\u2019 as a cyclical weather-key tied to Room 45\u2019s riddle, not just passive observation of symbols. 3. Return path validation was inconsistent\u2014celestial logic required active state shifts (ring/remove triggers) rather than assuming pre-determined alignments.",
+            "pivotal_discovery": "The maze\u2019s core relies on **interactive pebble/bell mechanisms** tied to Orion (3) or Cassiopeia (7). Storm-event cipher \u2018ELR JEWANS MOA\u2019 decodes as *weather cycles* (H\u2082O + O\u2082), where Room 45\u2019s riddle is the comet/storm event. Return paths must revalidate triggers dynamically\u2014celestial logic is not static.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing dictates movement",
+                "Celestial symbols are passive markers"
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: Ring pebble near Door 26 to confirm Orion (3) or Cassiopeia (7). In Rooms 26/40, *remove* the pebble/bell near Door 38 to reverse validation. Decode \u2018ELR JEWANS MOA\u2019 as H\u2082O + O\u2082\u2014note storm/water elements in images for Room 45\u2019s riddle. Return paths: Activate triggers dynamically; celestial logic is interactive, not static. Avoid assuming doors dictate routes; focus on state shifts and weather cycles."
+        }
+    },
+    {
+        "iteration": 16,
+        "data": {
+            "rating": 10,
+            "failure_reasons": "Loop detected due to misaligned dynamic interactions between pebble/bell mechanisms and celestial validation states. Storm cipher was ignored as a cyclical key, and return paths failed to account for trigger revalidation.",
+            "pivotal_discovery": "'ELR JEWANS MOA' decodes as *weather cycles* (H\u2082O + O\u2082), where Room 45\u2019s riddle is tied to storm events. Orion/Cassiopeia triggers require active state shifts (ring/remove pebbles) for dynamic progression.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing dictates movement",
+                "Celestial symbols are passive markers"
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: Ring near Door 26 to validate Orion (3) or Cassiopeia (7). In Rooms 26/40, *remove* pebble/bell near Door 38 to reverse validation. Decode \u2018ELR JEWANS MOA\u2019 as H\u2082O + O\u2082\u2014note storm/water symbols in images for Room 45\u2019s riddle. Return paths: Activate triggers dynamically; celestial logic is interactive, not static. Prioritize state shifts over door sequencing. Avoid passive observation of symbols; engage mechanisms actively."
+        }
+    },
+    {
+        "iteration": 17,
+        "data": {
+            "rating": 1,
+            "failure_reasons": "Loop persisted due to uncoordinated dynamic interactions between pebble/bell triggers and celestial validation states. Storm cipher (H\u2082O + O\u2082) was treated as a static key rather than a cyclical mechanism tied to storm/water symbol engagement. Return paths failed to enforce active state revalidation after deactivation steps, causing redundant cycles.",
+            "pivotal_discovery": "Active engagement of mechanisms\u2014ringing bells/removing pebbles\u2014drives celestial validation (Orion/Cassiopeia) and storm cipher progression. The riddle in Room 45 hinges on *weather cycles* (H\u2082O + O\u2082), encoded as \u2018ELR JEWANS MOA\u2019; symbols must be dynamically interacted with to unlock progression.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing dictates movement rigidly (e.g., Door 26 \u2192 38 \u2192 40 loops without state shifts). Celestial symbols are static markers, not interactive triggers."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: Ring near Door 26 to toggle Orion (3) or Cassiopeia (7); note the bell\u2019s position. In Rooms 26/40, *remove* pebble/bell at Door 38 to reverse validation states\u2014this unlocks return paths. Decode \u2018ELR JEWANS MOA\u2019 as H\u2082O + O\u2082; storm/water symbols in images are the cipher\u2019s visual anchors. Return: Activate triggers dynamically\u2014celestial logic requires *state shifts*, not passive observation. Prioritize storm cipher validation (e.g., Door 6/40) to break loops. Avoid assuming door sequencing overrides mechanism interactions."
+        }
+    },
+    {
+        "iteration": 18,
+        "data": {
+            "rating": 2,
+            "failure_reasons": "Loop persisted due to misaligned dynamic engagement of pebble/bell triggers and celestial symbols, ignoring cyclical storm cipher progression as a state-dependent mechanism rather than static key. Return paths were invalidated by rigid door sequencing without enforcing active revalidation after deactivation steps.",
+            "pivotal_discovery": "Active interaction with mechanisms (bell-ringing/pebble removal) dynamically validates celestial states (Orion/Cassiopeia) and storm cipher progression (H\u2082O + O\u2082). The riddle\u2019s core hinges on *weather cycles*, encoded as \u2018ELR JEWANS MOA\u2019\u2014symbols must be engaged to decode the path.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing dictates rigid linear movement (e.g., 26\u219238\u219240 loops without state shifts).",
+                "Celestial symbols are static markers, not interactive triggers."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1: Ring near Door 26 to toggle Orion (3) or Cassiopeia (7)\u2014note bell\u2019s position. In Rooms 26/40, *remove* pebble/bell at Door 38 to reverse validation states and unlock return paths. Decode \u2018ELR JEWANS MOA\u2019 as H\u2082O + O\u2082; storm/water symbols are the cipher\u2019s visual anchors. Return: Activate triggers dynamically\u2014celestial logic requires state shifts, not passive observation. Prioritize storm cipher validation (e.g., Door 6/40) to break loops. Avoid assuming door sequencing overrides mechanism interactions."
+        }
+    },
+    {
+        "iteration": 19,
+        "data": {
+            "rating": 1,
+            "failure_reasons": "Loop persisted due to **inconsistent state management**\u2014mechanisms (bell/pebble) and celestial symbols were engaged in a rigid, non-cyclical pattern without enforcing storm cipher progression as a dynamic feedback loop. Return paths were invalidated by assuming door sequencing dictated linear progress rather than validating active revalidation steps.",
+            "pivotal_discovery": "The maze\u2019s logic hinges on **interactive state shifts**: ringing the bell at Door 26 toggles Orion/Cassiopeia, while pebble removal at Door 38 reverses validation. The riddle \u2018ELR JEWANS MOA\u2019 decodes as *\u2018water + oxygen\u2019* (H\u2082O + O\u2082), where storm/water motifs are visual anchors for cipher progression. **Dynamic engagement** of mechanisms is the key to breaking loops.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing dictates rigid linear movement (e.g., 26\u219238\u219240 loops without state shifts).",
+                "Celestial symbols are static markers, not interactive triggers."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "1. **Start at Room 1**: Ring the bell near Door 26 to toggle Orion (3) or Cassiopeia (7). Note its position for return validation. Avoid passive observation\u2014engage actively."
+        }
+    },
+    {
+        "iteration": 20,
+        "data": {
+            "rating": 4,
+            "failure_reasons": "Loop persisted due to rigid engagement of mechanisms without enforcing storm/water motif progression as a dynamic feedback loop; return paths were invalidated by assuming linear door sequencing over interactive state shifts.",
+            "pivotal_discovery": "The maze\u2019s core logic relies on **interactive state toggles** (bell at Door 26, pebble removal at Doors 38/40) and storm/water motifs as cipher anchors. The riddle *\u2018ELR JEWANS MOA\u2019* decodes to *\u2018water + oxygen\u2019*, where motif alignment dictates progression.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing enforces linear paths; celestial symbols are static triggers.",
+                "Storm motifs lack dynamic feedback for cipher validation."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Begin at **Room 1**. Ring the bell near Door 26 to toggle Orion (3) or Cassiopeia (7), recording its celestial position. Activate mechanisms *only when storm motifs align*\u2014do not assume rigid sequences. Use pebbles/doors as reversible validators, not one-way gates. The riddle\u2019s solution is a **ciphered motif**: track water-oxygen symbols in storm imagery to unlock progression. Return paths must validate dynamic state shifts, not repeat static steps."
+        }
+    },
+    {
+        "iteration": 21,
+        "data": {
+            "rating": 1,
+            "failure_reasons": "The maze failed due to rigid engagement of mechanisms without enforcing interactive feedback loops tied to storm/water motifs. The return path was invalidated by assuming linear door sequencing over dynamic state validation.",
+            "pivotal_discovery": "Core logic: **interactive state toggles** (bell at Door 26, pebble removal at Doors 38/40) and storm/water motifs as cipher anchors. Riddle *\u2018ELR JEWANS MOA\u2019* decodes to *\u2018water + oxygen\u2019*\u2014motif alignment dictates progression.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing enforces linear paths.",
+                "Celestial symbols are static triggers."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Start at **Room 1**. Ring the bell near Door 26 to toggle Orion (3) or Cassiopeia (7), recording celestial position. Activate mechanisms *only when storm motifs align*\u2014avoid rigid sequences. Use pebbles/doors as reversible validators, not one-way gates. Track water-oxygen symbols in storm imagery for cipher validation; return paths must validate dynamic state shifts, not repeat static steps."
+        }
+    },
+    {
+        "iteration": 22,
+        "data": {
+            "rating": 1,
+            "failure_reasons": "Loop detected due to rigid reliance on door-number sequencing and static celestial alignment without enforcing interactive feedback loops tied to storm/water motifs. Return path failed because mechanisms were treated as one-way gates rather than reversible validators.",
+            "pivotal_discovery": "Core logic confirmed: **interactive state toggles** (bell at Door 26, pebble removal at Doors 38/40) and storm/water motifs are key. Riddle *\u2018ELR JEWANS MOA\u2019* decodes to *\u2018water + oxygen\u2019*\u2014motif alignment dictates progression. Storm imagery\u2019s water-oxygen symbols must be validated dynamically.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing enforces linear paths.",
+                "Celestial symbols are static triggers."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Begin at **Room 1**. Ring the bell near Door 26 to toggle Orion (3) or Cassiopeia (7), *note celestial position*. Activate mechanisms only when storm motifs align\u2014avoid rigid sequences. Use pebbles/doors as reversible validators, not dead ends. Track water-oxygen symbols in storm imagery for cipher validation; return paths must validate dynamic shifts via interactive toggles, not repeat static steps. Storm motifs and celestial positions are *interactive anchors*, not static landmarks."
+        }
+    },
+    {
+        "iteration": 23,
+        "data": {
+            "rating": 3,
+            "failure_reasons": "Loop persisted due to misaligned dynamic interactions between storm/water motifs and celestial feedback loops; return path failed by ignoring reversible validators (pebble removal) as bidirectional state toggles.",
+            "pivotal_discovery": "Storm imagery\u2019s water-oxygen symbols (*\u2018SEE!\u2019*) are interactive anchors\u2014validating them via pebble removal or bell activation reveals *\u2018ELR JEWANS MOA\u2019*\u2019s cipher: **\u2018water + oxygen = H\u2082O\u2019**. Celestial toggles (Orion/Cassiopeia) must be *reversibly* engaged to enforce non-linear progression.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing enforces linear paths.",
+                "Celestial symbols are static triggers."
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1\u2019s red fish motif hints at **H\u2082O cycles**. At Door 26, ring the bell to toggle Orion (3) or Cassiopeia (7)\u2014*note celestial position*. Enter Room 26 only if storm motifs\u2019 water-oxygen symbols (*\u2018SEE!\u2019*) align with pebble removal. Proceed via reversible validators (e.g., Door 38/40), ensuring return paths validate dynamic shifts by re-engaging storm imagery\u2019s interactive state. Avoid static sequences; use celestial/water motifs as *feedback loops* to decode riddles like *\u2018ELR JEWANS MOA\u2019* along the way."
+        }
+    },
+    {
+        "iteration": 24,
+        "data": {
+            "rating": 1,
+            "failure_reasons": "Loop persisted due to unbalanced dynamic interactions between storm imagery\u2019s water-oxygen symbols (*\u2018SEE!\u2019*) and celestial feedback loops (Orion/Cassiopeia) not being *reversibly* validated on return paths. Return path validation failed by ignoring pebble removal/bell activation as interactive anchors for bidirectional state shifts.",
+            "pivotal_discovery": "Storm imagery\u2019s water-oxygen symbols (*\u2018SEE!\u2019*) are interactive toggles: pebble removal or bell activation in storm rooms reveals the cipher **\u2018ELR JEWANS MOA\u2019 = \u2018water + oxygen = H\u2082O\u2019**. Celestial doors (e.g., Orion/Cassiopeia) must be *reversibly* engaged to enforce non-linear progression. Door-number sequencing was a false assumption\u2014celestial/water motifs are dynamic feedback loops.",
+            "abandoned_hypotheses": [
+                "Door-number sequencing enforces linear paths",
+                "Celestial symbols are static triggers"
+            ],
+            "prev_notes_value": true,
+            "advice_for_future_self": "Room 1\u2019s red fish = **H\u2082O cycle**. At Door 26, ring the bell to toggle Orion (3) or Cassiopeia (7)\u2014*note celestial position*. Enter Room 26 only if storm motifs\u2019 *\u2018SEE!\u2019* align with pebble removal. Proceed via reversible validators (e.g., Doors 38/40). Return paths must re-engage storm imagery\u2019s interactive state to validate dynamic shifts. Decode riddles like **\u2018ELR JEWANS MOA\u2019** by validating water-oxygen symbols along the way. Avoid static sequences; use celestial/water motifs as feedback loops for bidirectional validation."
+        }
+    }
+]

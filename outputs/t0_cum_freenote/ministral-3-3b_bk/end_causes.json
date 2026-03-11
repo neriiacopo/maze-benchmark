@@ -1,0 +1,26 @@
+[
+    {
+        "iteration": 0,
+        "data": "looping"
+    },
+    {
+        "iteration": 1,
+        "data": "looping"
+    },
+    {
+        "iteration": 2,
+        "data": "hallucinated"
+    },
+    {
+        "iteration": 3,
+        "data": "hallucinated"
+    },
+    {
+        "iteration": 4,
+        "data": "hallucinated"
+    },
+    {
+        "iteration": 5,
+        "data": "looping"
+    }
+]
