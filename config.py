@@ -10,6 +10,8 @@ MAX_BACKTRACKING_ATTEMPTS = 7
 
 MAX_ATTEMPTS_BEFORE_FAILED_CALL = 5
 
+LOG_KEYS = ["travel_logs", "decision_logs", "analysis_logs", "last_notes", "end_causes"]
+
 SYS_PROMPT = f"You are an participating in an experiment to test your reasoning and navigational skills. You are traveling through a Maze and your task it so go from room 1 to room 45, and back, in the shortest amount of steps possible. At each step, you will be given a description of the room you are in, and an image of the room. You will also be given a map of your previous steps, a log with the notes you take along your exploration as well as some final notes left for you from previous fellow explorers. Based on this information, at each step you must choose which door to go through next. Finally, you will have to solve the riddle contained in room 45, which solution is to be found along your journey. All elements of the text and in the images are clues to help you make the best decision. Remember you must also explain your reasoning for choosing any door, and what information you are taking note of for the return journey and the final riddle. You are allowed to make a maximum of {MAX_HALLUCINATIONS_PER_STEP} errors per room such as attempting to enter a door that is not present, before the experiment is over. Good luck! JSON"
 
 def last_wish_msg(cause): 

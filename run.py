@@ -10,63 +10,11 @@ Examples:
 """
 
 import argparse
-import json
 import os
-
-from langchain_google_genai import ChatGoogleGenerativeAI
-from langchain_openai import ChatOpenAI
 
 from utils.actions import resume_notes
 from utils.navigation import Agent, Maze, explore_maze
-from utils.utils import get_advices, get_survey
-
-LOG_KEYS = ["travel_logs", "decision_logs", "analysis_logs", "last_notes", "end_causes"]
-
-
-def build_model(provider: str, model_name: str, lmstudio_url: str):
-    if provider == "gemini":
-        return ChatGoogleGenerativeAI(model=model_name, request_timeout=180, max_retries=3)
-
-    if provider == "lmstudio":
-        return ChatOpenAI(
-            base_url=lmstudio_url,
-            api_key="not-needed",
-            model=model_name,
-            request_timeout=180,
-            max_retries=5,
-            max_tokens=8192,
-            seed=42,
-            model_kwargs={"response_format": {"type": "json_object"}},
-        )
-
-    # default: openai
-    return ChatOpenAI(
-        api_key=os.environ["OPENAI_API_KEY"],
-        model=model_name,
-        request_timeout=180,
-        max_retries=5,
-        max_tokens=8192,
-        seed=42,
-    )
-
-
-def load_data(output_dir: str) -> dict:
-    data = {}
-    for key in LOG_KEYS:
-        path = os.path.join(output_dir, f"{key}.json")
-        if os.path.exists(path):
-            with open(path) as f:
-                data[key] = json.load(f)
-        else:
-            data[key] = []
-    return data
-
-
-def save_data(data: dict, output_dir: str):
-    for key, content in data.items():
-        path = os.path.join(output_dir, f"{key}.json")
-        with open(path, "w", encoding="utf-8") as f:
-            json.dump(content, f, indent=4)
+from utils.utils import get_advices, get_survey, build_model, load_data, save_data
 
 
 def inject_notes(agent: Agent, data: dict, strategy: str, last_n: int):

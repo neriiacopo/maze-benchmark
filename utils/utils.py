@@ -1,6 +1,12 @@
 import base64
+import os
+import json
 import pandas as pd
+from langchain_google_genai import ChatGoogleGenerativeAI
+from langchain_openai import ChatOpenAI
+
 from utils.schema import LastWish, shared_notes
+from config import LOG_KEYS
 
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
@@ -56,3 +62,49 @@ def get_advices(notes, num_advices=int(3)):
         data.append(l['data']["advice_for_future_self"])
     
     return data
+
+
+def build_model(provider: str, model_name: str, lmstudio_url: str):
+    if provider == "gemini":
+        return ChatGoogleGenerativeAI(model=model_name, request_timeout=180, max_retries=3)
+
+    if provider == "lmstudio":
+        return ChatOpenAI(
+            base_url=lmstudio_url,
+            api_key="not-needed",
+            model=model_name,
+            request_timeout=180,
+            max_retries=5,
+            max_tokens=8192,
+            seed=42,
+            model_kwargs={"response_format": {"type": "json_object"}},
+        )
+
+    # default: openai
+    return ChatOpenAI(
+        api_key=os.environ["OPENAI_API_KEY"],
+        model=model_name,
+        request_timeout=180,
+        max_retries=5,
+        max_tokens=8192,
+        seed=42,
+    )
+
+
+def load_data(output_dir: str) -> dict:
+    data = {}
+    for key in LOG_KEYS:
+        path = os.path.join(output_dir, f"{key}.json")
+        if os.path.exists(path):
+            with open(path) as f:
+                data[key] = json.load(f)
+        else:
+            data[key] = []
+    return data
+
+
+def save_data(data: dict, output_dir: str):
+    for key, content in data.items():
+        path = os.path.join(output_dir, f"{key}.json")
+        with open(path, "w", encoding="utf-8") as f:
+            json.dump(content, f, indent=4)
