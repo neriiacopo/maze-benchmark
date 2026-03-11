@@ -5,3 +5,4 @@
 *.pyc
 .claude*
 outputs*/*
+!outputs/.gitkeep
