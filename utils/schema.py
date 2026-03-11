@@ -16,7 +16,7 @@ class MazeResponse(BaseModel):
     model_config = {"extra": "allow"}
     analysis: Analysis
     decision: Decision
-    travel_log_update: str = Field(description="Information to remember for the overall journey or the final riddle.")
+    travel_log_update: str = Field(default="", description="REQUIRED: Information to remember for the overall journey or the final riddle. Do not leave this empty.")
 
 class PrologueAnalysis(BaseModel):
     meta_observations: str = Field(description="Analyze the cover and prologue for themes, hidden text, or symbolic clues.")

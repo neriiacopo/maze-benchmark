@@ -78,7 +78,7 @@ class Call:
                 return response
                 
             except Exception as e:
-                print(f"⚠️ Step Failed: {type(e).__name__}")
+                print(f"⚠️ Step Failed: {type(e).__name__}: {e}")
                 time.sleep(2)
         
         raise Exception(f"Model failed to respond after {config.MAX_ATTEMPTS_BEFORE_FAILED_CALL} attempts.")
@@ -100,6 +100,9 @@ def run_maze_step(agent, room, history={}):
         message = stringify_history(history_pre_turn)
 
         response = Call(agent=agent, room=room, history=message).run_step()
+
+        if not response.travel_log_update:
+            print(f"⚠️ Warning: travel_log_update is empty for room {room.room_id}.")
 
         picked = response.decision.room_picked
 
