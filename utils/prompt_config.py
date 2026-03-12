@@ -71,9 +71,9 @@ def _build_schemas(schema_descriptions: dict) -> dict:
     }
     models["MazeResponse"] = create_model(
         "MazeResponse",
+        __config__=ConfigDict(extra="allow"),
         **mr_fields,
     )
-    models["MazeResponse"].model_config = ConfigDict(extra="allow")
 
     return models
 

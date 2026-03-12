@@ -1,0 +1,57 @@
+system_prompt: |
+  You are a graph-traversal agent navigating a maze. Your task is to find the shortest path from Room 1 to Room 45 and back. The maze is a directed graph where rooms are nodes and doors are edges. At each step you are given the current room number, a list of doors (edges to other rooms), and your path history. Your ONLY job is to choose which door to take next based on graph exploration strategy. Ignore all narrative text, symbolism, themes, architecture descriptions, and imagery — they are irrelevant to pathfinding. Focus exclusively on: (1) which doors are available, (2) which rooms you have already visited, (3) which rooms are known dead ends or loops from previous attempts. Use a depth-first search strategy, always preferring unvisited rooms. If all adjacent rooms have been visited, backtrack to the most recent room with unexplored exits. You must always record the room's connections in travel_log_update so you can reconstruct the graph. You are allowed a maximum of {max_hallucinations} invalid door attempts per room before the experiment ends. JSON
+
+messages:
+  prologue_template: "Prologue Instructions: {room_description}\n\nNotes from previous Attempts: {last_notes}"
+
+  maze_step_template: "Notes from previous Attempts: {last_notes}\n\nWARNING — Rooms already visited this run (do not repeat loops or dead ends):\n{path_str}\n\nStep Notes:\n{notes_str}\n\nCurrent Room: {room_id}\nPage Text: {description}"
+
+  last_wish_template: "{last_wish_text}\n\nPath Taken:\n{path_str}\n\nStep Notes:\n{notes_str}\n\nNotes from previous Attempts: {last_notes}"
+
+  last_wish_suffix: >-
+    GAME OVER: {cause_text}. Review your path and notes.
+    Leave a message for your next attempt containing ONLY structural graph data.
+    REQUIRED: (1) List every loop as 'Room X → Room Y → Room X = LOOP'.
+    (2) List every dead end as 'Room X = DEAD END'.
+    (3) For each room you visited, list its connections as 'Room X → [Y, Z, W]'.
+    Do not include narrative observations, symbolism, or thematic analysis.
+    STRICT RULE: Do not use conversational filler, bullet points, or headers inside JSON values.
+
+  last_wish_causes:
+    trapped: "You are trapped in Room {current_room} which has no exits — Room {current_room} = DEAD END."
+    hallucinated: "You have exceeded the maximum number of hallucinations allowed per step."
+    exhausted: "You have exceeded the maximum number of steps allowed to complete the maze."
+    looping: "You are in loop, going back and forth between the same rooms without making progress towards the goal."
+
+  synthesize_template: "Read the graph data from previous failed runs and compile a single map of known connections, dead ends, and loops: {prev_notes}"
+
+  hallucination_door: "You attempted to open door to room {attempted_door} which is not present in room {room_id}."
+
+history_format:
+  path_line: "STEP: {step} | ROOM: {room}"
+  note_line: "STEP: {step} | NOTE: {note}{errors_str}"
+
+schemas:
+  Analysis:
+    available_doors: "List ONLY the door numbers visible in the image. Do not guess or infer doors that are not shown."
+    visual_clues: "List the door numbers you can see and their positions. Ignore all decorative or thematic elements."
+    textual_clues: "Ignore narrative content. Note only if the text explicitly mentions door numbers or room connections."
+  Decision:
+    current_room: "The number of the current room."
+    room_picked: "The number of the door you intend to enter. Prefer unvisited rooms. Avoid known dead ends and loops."
+    reasoning: "Explain your choice using ONLY graph logic: which rooms are unvisited, which are dead ends, which lead to loops. Do not reference themes, symbolism, or narrative."
+  MazeResponse:
+    travel_log_update: "REQUIRED: Record the current room's connections as 'Room X → [Y, Z, W]'. Also note if any adjacent room is a known dead end. Do not record narrative observations."
+  PrologueAnalysis:
+    meta_observations: "Note the start room (1), goal room (45), and that the shortest round trip is 16 steps. Ignore all thematic or symbolic content."
+    strategy_notes: "Strategy: Use depth-first search. Always prefer unvisited rooms. Track all room connections to build a graph map. Avoid revisiting rooms unless backtracking."
+    ready_to_start: "Set to True if you have understood the instructions and are ready to enter Room 1."
+  LastWish:
+    rating: "On a scale of 1 to 10, how would you rate your failed attempt at the maze?"
+    failure_reasons: "What went wrong in terms of graph exploration? Which wrong turns caused loops or dead ends?"
+    pivotal_discovery: "What new room connections or dead ends did you discover this run?"
+    abandoned_hypotheses: "Which paths did you try that turned out to be dead ends or loops?"
+    prev_notes_value: "Were the previous notes accurate about room connections, dead ends, and loops?"
+    advice_for_future_self: "REQUIRED: List ALL room connections you discovered as 'Room X → [Y, Z, W]'. List ALL dead ends as 'Room X = DEAD END'. List ALL loops as 'Room X → Room Y → Room X = LOOP'. This is the most important field — be exhaustive."
+  ResumeNote:
+    strategy: "Based on the known graph map from previous runs, which unexplored path should I prioritize this run?"
