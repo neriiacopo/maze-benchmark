@@ -4,8 +4,9 @@ from utils.actions import run_maze_step, run_prologue_step, game_over
 
 
 class Agent:
-    def __init__(self, model, last_notes=""):
+    def __init__(self, model, prompt_config, last_notes=""):
         self.model = model
+        self.prompt_config = prompt_config
         self.alive = True
         self.status = "exploring"
         self.last_notes = last_notes

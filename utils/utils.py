@@ -5,23 +5,23 @@ import pandas as pd
 from langchain_google_genai import ChatGoogleGenerativeAI
 from langchain_openai import ChatOpenAI
 
-from utils.schema import LastWish, shared_notes
+from utils.prompt_config import SHARED_NOTES
 from config import LOG_KEYS
 
 def encode_image(image_path):
     with open(image_path, "rb") as image_file:
         return base64.b64encode(image_file.read()).decode('utf-8')
 
-def format_maze_history(history):
+def format_maze_history(history, prompt_config):
     """Returns (path_str, notes_str) for use in the maze step prompt."""
     path_lines = []
     note_lines = []
 
     for s in history:
-        path_lines.append(f"STEP: {s['step']} | ROOM: {s['room']}")
+        path_lines.append(prompt_config.format_path_line(step=s['step'], room=s['room']))
         errors = s.get("hallucinations", [])
         errors_str = f" | ERRORS: {'; '.join(errors)}" if errors else ""
-        note_lines.append(f"STEP: {s['step']} | NOTE: {s.get('note', '')}{errors_str}")
+        note_lines.append(prompt_config.format_note_line(step=s['step'], note=s.get('note', ''), errors_str=errors_str))
 
     return "\n".join(path_lines), "\n".join(note_lines)
 
@@ -36,21 +36,22 @@ def preprocess_df(path):
 def check_loop(picked, travel_history, backtracking=3):
     if len(travel_history) < backtracking:
         return False
-    
+
     last_rooms_id = [entry["room"] for entry in travel_history[-backtracking:]]
-    
+
     return picked in last_rooms_id
 
-def get_survey(notes):
+def get_survey(notes, prompt_config):
+    last_wish_schema = prompt_config.schemas["LastWish"]
     formatted_parts = []
 
-    for key in shared_notes:
-        description = LastWish.model_fields[key].description
+    for key in SHARED_NOTES:
+        description = last_wish_schema.model_fields[key].description
         value = notes.get(key) if isinstance(notes, dict) else getattr(notes, key)
-        
+
         if isinstance(value, list):
             value = ", ".join(value)
-        
+
         formatted_parts.append(f"{description} {value}")
 
     string = "\n".join(formatted_parts)
@@ -63,7 +64,7 @@ def get_advices(notes, num_advices=int(3)):
 
     for l in list:
         data.append(l['data']["advice_for_future_self"])
-    
+
     return data
 
 

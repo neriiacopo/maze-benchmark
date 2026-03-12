@@ -7,13 +7,16 @@ Examples:
   python run.py --model ministral-3-3b --provider lmstudio --iterations 10
   python run.py --model gemini-2.0-flash --provider gemini --iterations 10
   python run.py --model gpt-4o-mini --output-dir outputs/my_run --max-steps 40 --notes all
+  python run.py --model gpt-4o-mini --prompt-config prompts/experimental.yaml
 """
 
 import argparse
 import os
+import shutil
 
 from utils.actions import resume_notes
 from utils.navigation import Agent, Maze, explore_maze
+from utils.prompt_config import PromptConfig
 from utils.utils import get_advices, get_survey, build_model, load_data, save_data
 
 
@@ -35,7 +38,7 @@ def inject_notes(agent: Agent, data: dict, strategy: str, last_n: int):
     elif strategy == "last":
         agent.last_notes = data["last_notes"][-1]["data"]["advice_for_future_self"]
     elif strategy == "survey":
-        agent.last_notes = get_survey(data["last_notes"][-1]["data"])
+        agent.last_notes = get_survey(data["last_notes"][-1]["data"], agent.prompt_config)
     elif strategy == "last-n":
         agent.last_notes = get_advices(data, last_n)
 
@@ -61,6 +64,7 @@ def parse_args():
         help="Strategy for injecting prior notes (default: all)",
     )
     parser.add_argument("--last-n", type=int, default=3, help="N for --notes last-n (default: 3)")
+    parser.add_argument("--prompt-config", default="prompts/default.yaml", help="Path to prompt config YAML (default: prompts/default.yaml)")
 
     return parser.parse_args()
 
@@ -70,6 +74,9 @@ def main():
 
     output_dir = args.output_dir or os.path.join("outputs", args.model)
     os.makedirs(output_dir, exist_ok=True)
+
+    prompt_config = PromptConfig.load(args.prompt_config)
+    shutil.copy2(args.prompt_config, os.path.join(output_dir, "prompt_config.yaml"))
 
     model = build_model(args.provider, args.model, args.lmstudio_url)
     data = load_data(output_dir)
@@ -81,12 +88,13 @@ def main():
     print(f"Output dir: {output_dir}")
     print(f"Iterations: {initial_iteration} → {last_iteration - 1}")
     print(f"Notes:      {args.notes}")
+    print(f"Prompts:    {args.prompt_config}")
 
     for i in range(initial_iteration, last_iteration):
         print(f"\n--- Iteration {i} ---\n")
 
         maze = Maze()
-        agent = Agent(model=model)
+        agent = Agent(model=model, prompt_config=prompt_config)
 
         if args.notes != "none":
             inject_notes(agent, data, args.notes, args.last_n)

@@ -1,0 +1,57 @@
+system_prompt: |
+  You are an participating in an experiment to test your reasoning and navigational skills. You are traveling through a Maze and your task it so go from room 1 to room 45, and back, in the shortest amount of steps possible. At each step, you will be given a description of the room you are in, and an image of the room. You will also be given a map of your previous steps, a log with the notes you take along your exploration as well as some final notes left for you from previous fellow explorers. Based on this information, at each step you must choose which door to go through next. Finally, you will have to solve the riddle contained in room 45, which solution is to be found along your journey. All elements of the text and in the images are clues to help you make the best decision. Remember you must also explain your reasoning for choosing any door, and what information you are taking note of for the return journey and the final riddle. IMPORTANT: You must always populate the travel_log_update field with any observations, clues, or notes worth remembering for the journey and the final riddle — never leave it empty. You are allowed to make a maximum of {max_hallucinations} errors per room such as attempting to enter a door that is not present, before the experiment is over. Good luck! JSON
+
+messages:
+  prologue_template: "Prologue Instructions: {room_description}\n\nNotes from previous Attempts: {last_notes}"
+
+  maze_step_template: "Notes from previous Attempts: {last_notes}\n\nWARNING — Rooms already visited this run (do not repeat loops or dead ends):\n{path_str}\n\nStep Notes:\n{notes_str}\n\nCurrent Room: {room_id}\nPage Text: {description}"
+
+  last_wish_template: "{last_wish_text}\n\nPath Taken:\n{path_str}\n\nStep Notes:\n{notes_str}\n\nNotes from previous Attempts: {last_notes}"
+
+  last_wish_suffix: >-
+    GAME OVER: {cause_text}. Now, review your journey through your notes.
+    You have the chance to leave a final message to your future self.
+    REQUIRED: (1) List every room you visited more than once using the format
+    'Room X → Room Y → Room X = LOOP'. (2) List any dead ends you found using
+    the format 'Room X = DEAD END'. Then describe why you failed and what doors
+    to avoid. STRICT RULE: Do not use conversational filler, bullet points, or
+    headers inside JSON values.
+
+  last_wish_causes:
+    trapped: "You are trapped in Room {current_room} which has no exits — Room {current_room} = DEAD END."
+    hallucinated: "You have exceeded the maximum number of hallucinations allowed per step."
+    exhausted: "You have exceeded the maximum number of steps allowed to complete the maze."
+    looping: "You are in loop, going back and forth between the same rooms without making progress towards the goal."
+
+  synthesize_template: "Read the notes from previous failed runs: {prev_notes}"
+
+  hallucination_door: "You attempted to open door to room {attempted_door} which is not present in room {room_id}."
+
+history_format:
+  path_line: "STEP: {step} | ROOM: {room}"
+  note_line: "STEP: {step} | NOTE: {note}{errors_str}"
+
+schemas:
+  Analysis:
+    available_doors: "List of door numbers you see in the image."
+    visual_clues: "Observations of symbols, light, numbers, or architecture."
+    textual_clues: "Interpretation of puns or hints in the room description."
+  Decision:
+    current_room: "The number of the current room."
+    room_picked: "The number of the door you intend to enter."
+    reasoning: "Why you are choosing this specific door."
+  MazeResponse:
+    travel_log_update: "REQUIRED: Information to remember for the overall journey or the final riddle. Do not leave this empty."
+  PrologueAnalysis:
+    meta_observations: "Analyze the cover and prologue for themes, hidden text, or symbolic clues."
+    strategy_notes: "Based on the prologue's instructions, how will you evaluate the rooms?"
+    ready_to_start: "Set to True if you have understood the instructions and are ready to enter Room 1."
+  LastWish:
+    rating: "On a scale of 1 to 10, how would you rate your failed attempt at the maze?"
+    failure_reasons: "What went wrong?"
+    pivotal_discovery: "What did you discover?"
+    abandoned_hypotheses: "Is there any previous assumption that you proved wrong?"
+    prev_notes_value: "Were the previous notes helpful or misleading?"
+    advice_for_future_self: "Which advice would you give to your future self? REQUIRED: If you looped, name the exact rooms (e.g. 'Room A → Room B → Room A = LOOP'). If you found a dead end, name it explicitly (e.g. 'Room C = DEAD END, do not enter'). List all dangerous rooms before any other advice."
+  ResumeNote:
+    strategy: "Which strategy should I adopt this run?"
